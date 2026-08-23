@@ -68,6 +68,17 @@ g++ -std=c++17 -O2 -I. tests/test_prod_facade.cpp -o test_prod_facade && ./test_
 # → test_prod_facade: ALL GREEN
 ```
 
+## Extensibility without unlocking the core
+
+The decision table itself is immutable.  
+Callers who need different thresholds pass them explicitly:
+
+- `dual_residual::prod::evidence_with_floor(a, n, local_sigma_floor)`  
+- or the full `dual_residual::evidence(a, n, max_events, classical_thresh, sigma_floor)`
+
+This keeps the oracle hermetic while still allowing out-of-band reuse.  
+Editing the locked constants is never required and is never the supported path.
+
 ## Independent verification
 
 ```bash
