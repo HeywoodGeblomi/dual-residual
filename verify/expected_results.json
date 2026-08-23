@@ -1,0 +1,21 @@
+{
+  "test_evidence": "ALL GREEN",
+  "test_parity_oracle": "ALL GREEN",
+  "controls": {
+    "sorted": { "confirmed": false, "suggested": "None" },
+    "reverse": { "confirmed": false, "suggested": "None" },
+    "equal_heavy": { "confirmed": false, "suggested": "None" }
+  },
+  "decision_table": {
+    "not_dual_owned": "None",
+    "high_sigma_delta": "T2",
+    "high_classical": "T3",
+    "else": "T1"
+  },
+  "constants": {
+    "CLASSICAL_OWNED_THRESH": 0.04,
+    "SECOND_SOLID_FLOOR": 0.005,
+    "TALENT2_SIGMA_THRESH": 0.1,
+    "TALENT3_CLASSICAL": 0.2
+  }
+}
