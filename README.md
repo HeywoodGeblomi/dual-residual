@@ -2,9 +2,21 @@
 
 **Secondary Parity dual-evidence primitive** — minimal single-header core.
 
-A classical disorder score (visible polarity magnitude) plus a second solid signal (σ_Δ from even-indexed event parity) jointly decide whether a residual path is owned, and emit a talent suggestion (T1 / T2 / T3).
+This is **not** a general-purpose library, high-performance utility, or industry tool.
+It is a locked, deterministic, dual-evidence oracle that answers one narrow question:
 
-This is the transferable core. It does not sort. It does not claim soft@1.20. It does not depend on any residual menu or library.
+> Given an array, do classical disorder + even-indexed event parity (σ_Δ) jointly own a residual path, and if so what talent (T1/T2/T3) is suggested?
+
+The decision table and thresholds (0.04 / 0.005 / 0.1 / 0.2) are **immutable**.  
+That is the point. Parameterizing them would break the oracle property.
+
+- Zero third-party dependencies
+- C++17, single header
+- Independent verification suite (ALL GREEN required)
+- Production facade exists for null/size guards only — core is never modified
+
+If you need a configurable, adaptive, or high-throughput statistical filter, this is the wrong repository.  
+If you need the exact dual-evidence primitive with a frozen decision table, this is it.
 
 ## Use
 
