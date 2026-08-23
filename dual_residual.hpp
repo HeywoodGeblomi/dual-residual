@@ -1,3 +1,6 @@
+// Copyright (c) 2026 Heywood Geblomi
+// Dual licensed: AGPLv3 (non-commercial) or Commercial License (see LICENSE)
+
 #pragma once
 /*
  * dual_residual.hpp — Secondary Parity dual-evidence primitive
