@@ -33,6 +33,29 @@ else if (classical > 0.2) → T3
 else → T1
 ```
 
+Constants are immutable: `0.04 / 0.005 / 0.1 / 0.2`.
+
+## Production facade (optional)
+
+For production call sites that need pointer/size guards:
+
+```cpp
+#include "dual_residual_prod.hpp"
+
+auto e = dual_residual::prod::evidence(a, n);  // null + size sanity, then core
+```
+
+- Core header is never modified.
+- Decision table is never modified.
+- Facade only: guards → `dual_residual::evidence(...)` → result unchanged.
+- Opt-in floor override: `evidence_with_floor(a, n, local_floor)`.
+- Independent verification of the core remains the product gate.
+
+```bash
+g++ -std=c++17 -O2 -I. tests/test_prod_facade.cpp -o test_prod_facade && ./test_prod_facade
+# → test_prod_facade: ALL GREEN
+```
+
 ## Independent verification
 
 ```bash
@@ -50,6 +73,7 @@ See `verify/independent_host.md` for the stranger path (<10 minutes).
 - No soft@1.20 or performance claim.
 - No photonic hardware, optical computing, or complexity-theoretic result.
 - Worst-case behaviour of any consumer remains the consumer's responsibility.
+- Production facade does not alter the oracle.
 
 ## License
 
