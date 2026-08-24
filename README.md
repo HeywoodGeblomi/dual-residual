@@ -7,6 +7,8 @@ It is a locked, deterministic, dual-evidence oracle that answers one narrow ques
 
 > Given an array, do classical disorder + even-indexed event parity (σ_Δ) jointly own a residual path, and if so what talent (T1/T2/T3) is suggested?
 
+**Novelty (protected):** classical disorder + σ_Δ must jointly confirm before the residual path is owned.
+
 The decision table and thresholds (0.04 / 0.005 / 0.1 / 0.2) are **immutable**.  
 That is the point. Parameterizing them would break the oracle property.
 
@@ -122,7 +124,7 @@ See `verify/independent_host.md` for the stranger path (<10 minutes).
 ## Non-claims
 
 - Not a sorting algorithm.
-- No soft@1.20 or performance claim.
+- No soft@1.20 or performance claim (that gate lives on the PhotonicSort charged surface only).
 - No photonic hardware, optical computing, or complexity-theoretic result.
 - Worst-case behaviour of any consumer remains the consumer's responsibility.
 - Production facade does not alter the oracle.
