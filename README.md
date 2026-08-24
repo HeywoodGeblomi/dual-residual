@@ -27,9 +27,10 @@ int64_t a[n] = { /* ... */ };
 auto e = dual_residual::evidence(a, n);
 
 if (e.confirmed) {
-    // dual_owned — residual path is jointly confirmed
-    // e.suggested is T1, T2, or T3
-    // e.sigma_delta and e.classical are the visible metrics
+    // to   = confirmed   (dual_owned residual path)
+    // in   = suggested   (T1 / T2 / T3)
+    // from = classical   (polarity magnitude)
+    // with = sigma_delta (σ_Δ)
 }
 ```
 
@@ -46,6 +47,33 @@ else → T1
 ```
 
 Constants are immutable: `0.04 / 0.005 / 0.1 / 0.2`.
+
+## Relational preposition overlay (optional)
+
+Semantic naming only. Zero change to computation or thresholds.
+
+**Matrix:** `{[to, in]  [from, with]}`
+
+| Token | Role | Maps to |
+|-------|------|--------|
+| **from** | Origin axis | `classical` (polarity magnitude) |
+| **with** | Accompanying axis | `sigma_delta` (σ_Δ) |
+| **to** | Ownership path | `confirmed` (dual_owned) |
+| **in** | Container / result | `suggested` (Talent T1/T2/T3) |
+
+Narrative:
+
+> *from* classical *with* σ_Δ → dual_owned *to* residual path *in* talent
+
+```cpp
+#include "dual_residual_relational.hpp"
+
+auto e = dual_residual::relational::evidence(a, n);
+// e is bit-identical to dual_residual::evidence / prod::evidence
+// Field names unchanged: classical, sigma_delta, confirmed, suggested
+```
+
+Core and production facade remain locked. This header only names the axes.
 
 ## Production facade (optional)
 
@@ -84,9 +112,10 @@ Editing the locked constants is never required and is never the supported path.
 ```bash
 g++ -std=c++17 -O2 -I. tests/test_evidence.cpp -o test_evidence && ./test_evidence
 g++ -std=c++17 -O2 -I. tests/test_parity_oracle.cpp -o test_parity_oracle && ./test_parity_oracle
+g++ -std=c++17 -O2 -I. -Itests tests/test_relational_facade.cpp -o test_relational_facade && ./test_relational_facade
 ```
 
-Both must print `ALL GREEN`.
+All must print `ALL GREEN`.
 
 See `verify/independent_host.md` for the stranger path (<10 minutes).
 
@@ -97,6 +126,7 @@ See `verify/independent_host.md` for the stranger path (<10 minutes).
 - No photonic hardware, optical computing, or complexity-theoretic result.
 - Worst-case behaviour of any consumer remains the consumer's responsibility.
 - Production facade does not alter the oracle.
+- Relational overlay is semantic naming only — no new computation.
 
 ## License
 
