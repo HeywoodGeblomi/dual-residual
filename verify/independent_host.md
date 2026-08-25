@@ -19,14 +19,19 @@ g++ -std=c++17 -O2 -I. tests/test_evidence.cpp -o test_evidence
 g++ -std=c++17 -O2 -I. tests/test_parity_oracle.cpp -o test_parity_oracle
 ./test_parity_oracle
 # expected: ALL GREEN (test_parity_oracle)
+
+g++ -std=c++17 -O2 -I. tests/test_borderline_cases.cpp -o test_borderline_cases
+./test_borderline_cases
+# expected: ALL GREEN (test_borderline_cases)
 ```
 
 ## 3. Interpret
 
 - `test_evidence` covers controls (sorted / reverse / equal-heavy → not dual_owned), talent decision table, short arrays, and finite metrics on borderline-HE / random inputs.
 - `test_parity_oracle` covers determinism, classical floor behaviour, and dual_confirm edge cases.
+- `test_borderline_cases` is the honest single-soft failure suite: pairwise/alt/zigzag cases where classical alone would own residual but dual correctly refuses; plus a dual-owned confirmation case. See `BORDERLINE.md`.
 
-If both print `ALL GREEN`, the core matches the locked decision table and parity construction.
+If all print `ALL GREEN`, the core matches the locked decision table and parity construction.
 
 ## 4. Optional: inspect the header
 
