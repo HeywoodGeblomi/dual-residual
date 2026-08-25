@@ -47,6 +47,19 @@ If you do not already have a residual path, this note is not for you.
 
 ---
 
+## Borderline case library (proof juice)
+
+A small, honest suite lives in `tests/test_borderline_cases.cpp` + `BORDERLINE.md`.
+
+It shows residual situations where **single soft-signal ownership would mis-route** while **dual ownership (classical + σ_Δ) correctly refuses or confirms**. Controls still refuse. EXTERNAL-clean. Core thresholds untouched.
+
+```bash
+g++ -std=c++17 -O2 -I. tests/test_borderline_cases.cpp -o test_borderline_cases && ./test_borderline_cases
+# → ALL GREEN (test_borderline_cases)
+```
+
+This is the evidence adaptive-menu engineers need — not soft@ theater.
+
 ## How to verify (stranger path)
 
 ```bash
@@ -54,9 +67,10 @@ git clone https://github.com/HeywoodGeblomi/dual-residual.git
 cd dual-residual
 g++ -std=c++17 -O2 -I. tests/test_evidence.cpp -o test_evidence && ./test_evidence
 g++ -std=c++17 -O2 -I. tests/test_parity_oracle.cpp -o test_parity_oracle && ./test_parity_oracle
+g++ -std=c++17 -O2 -I. tests/test_borderline_cases.cpp -o test_borderline_cases && ./test_borderline_cases
 ```
 
-Both must print `ALL GREEN`.  
+All must print `ALL GREEN`.  
 See `verify/independent_host.md` for the full <10-minute path.
 
 Core is one header: `dual_residual.hpp`. Zero third-party deps. C++17.
