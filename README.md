@@ -122,10 +122,13 @@ Editing the locked constants is never required and is never the supported path.
 ```bash
 g++ -std=c++17 -O2 -I. tests/test_evidence.cpp -o test_evidence && ./test_evidence
 g++ -std=c++17 -O2 -I. tests/test_parity_oracle.cpp -o test_parity_oracle && ./test_parity_oracle
+g++ -std=c++17 -O2 -I. tests/test_borderline_cases.cpp -o test_borderline_cases && ./test_borderline_cases
 g++ -std=c++17 -O2 -I. -Itests tests/test_relational_facade.cpp -o test_relational_facade && ./test_relational_facade
 ```
 
 All must print `ALL GREEN`.
+
+Borderline case library (single-soft failure modes vs dual correct refuse/confirm): see `BORDERLINE.md`.
 
 See `verify/independent_host.md` for the stranger path (<10 minutes).
 
