@@ -2,6 +2,14 @@
 
 **Secondary Parity dual-evidence primitive** — minimal single-header core.
 
+**What:** Dual-key residual ownership rule — classical disorder + σ_Δ (even-indexed event parity) must jointly confirm before a residual path is owned and a talent (T1/T2/T3) is suggested.
+
+**Who:** Engineers who already route residual / talent / adaptive menus with a single soft threshold and hit borderline selection failures.
+
+**Next:** Clone → run independent verification to `ALL GREEN` → if production embed, request a paid commercial grant ([COMMERCIAL.md](COMMERCIAL.md)). AGPLv3 otherwise.
+
+---
+
 This is **not** a general-purpose library, high-performance utility, or industry tool.
 It is a locked, deterministic, dual-evidence oracle that answers one narrow question:
 
