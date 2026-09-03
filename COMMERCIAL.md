@@ -19,7 +19,9 @@ There are no free commercial grants. No verbal grant is valid.
 
 Contact the copyright holder:
 
+- **Holder:** Heywood Geblomi (sole ©)
 - **GitHub:** [@HeywoodGeblomi](https://github.com/HeywoodGeblomi)
+- **Email:** e274mk@gmail.com
 - **Request subject (exact):** `dual-residual commercial license request`
 
 Serious inquiries are **answered within 2 business days** with tier options and next steps.
