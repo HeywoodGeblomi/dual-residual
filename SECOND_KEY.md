@@ -19,9 +19,11 @@ Single-signal residual ownership is the default in the field. It is also the fai
 
 ## The second key
 
-**Dual-evidence residual ownership:** classical disorder and a second independent solid signal must **jointly** confirm before the residual path is owned.
+**Dual-evidence residual ownership:** classical disorder and a second solid signal must **jointly** confirm before the residual path is owned.
 
 In this primitive the second signal is **σ_Δ** — even-indexed event parity. Not a soft score. Not a tunable weight. A solid axis that must agree with classical disorder before any talent (T1 / T2 / T3) is suggested.
+
+The two maps read the same polarity stream. Separation on the borderline suite is empirical, not algebraic independence.
 
 ```
 dual_owned = classical > 0.04 && |σ_Δ| >= 0.005
@@ -33,7 +35,7 @@ else → T1
 
 Thresholds are **immutable**. That is the oracle property. Parameterizing them would turn the dual-key rule back into another soft menu.
 
-This is not a sorter. It is not a claim about soft@1.20. It is a **locked decision primitive** that answers one question: do two independent signals jointly own residual, and if so which talent?
+This is not a sorter. It is not a claim about soft@1.20. It is a **locked decision primitive** that answers one question: do classical disorder and σ_Δ jointly own residual, and if so which talent?
 
 ---
 
