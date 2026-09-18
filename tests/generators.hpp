@@ -33,6 +33,10 @@ inline std::vector<int64_t> equal_heavy(size_t n, int64_t mode = 42) {
     return a;
 }
 
+inline std::vector<int64_t> all_ties(size_t n, int64_t mode = 7) {
+    return std::vector<int64_t>(n, mode);
+}
+
 // Borderline high-entropy: high unique + moderate inversions
 inline std::vector<int64_t> borderline_he(size_t n, uint64_t seed = 0xD00D) {
     std::mt19937_64 rng(seed);
@@ -85,6 +89,7 @@ inline std::vector<int64_t> block_zigzag(size_t n, size_t block = 64) {
 
 // Noisy ramp with fixed seed/amplitude that yields solid σ_Δ.
 // Dual owns correctly; classical also high (both agree).
+// Measured (g++ -O2): confirmed, T3, C≈0.962891, σ_Δ≈-0.092215
 inline std::vector<int64_t> noisy_ramp_confirmed(size_t n = 1024, uint64_t seed = 42) {
     std::mt19937_64 rng(seed);
     std::vector<int64_t> a(n);
@@ -95,6 +100,7 @@ inline std::vector<int64_t> noisy_ramp_confirmed(size_t n = 1024, uint64_t seed 
 }
 
 // Moderate local disorder (partial swaps) — high classical, weak σ_Δ.
+// Measured (g++ -O2, n=1024, seed 0xB0B0): !confirmed, None, C=1.0, σ_Δ=0.0
 inline std::vector<int64_t> moderate_local_disorder(size_t n, uint64_t seed = 0xB0B0) {
     std::mt19937_64 rng(seed);
     std::vector<int64_t> a(n);
@@ -102,6 +108,20 @@ inline std::vector<int64_t> moderate_local_disorder(size_t n, uint64_t seed = 0x
     for (int k = 0; k < 120; ++k) {
         size_t i = rng() % (n - 1);
         std::swap(a[i], a[i + 1]);
+    }
+    return a;
+}
+
+// Biased random walk. Measured (g++ -O2, n=1024, seed=8): confirmed, T2,
+// C≈0.7832, σ_Δ≈0.1897. Forces T2 through evidence(), not just compute_talent.
+inline std::vector<int64_t> biased_walk_t2(size_t n = 1024, uint64_t seed = 8) {
+    std::mt19937_64 rng(seed);
+    std::vector<int64_t> a(n);
+    int64_t v = 0;
+    for (size_t i = 0; i < n; ++i) {
+        a[i] = v;
+        int64_t step = (int64_t)(rng() % 5) - 1; // {-1,0,1,2,3}
+        v += step;
     }
     return a;
 }
