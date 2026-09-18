@@ -1,7 +1,7 @@
 # The Second Key for Residual Menus
 
 Technical note · dual-residual · 2026-08-25  
-Aimed at engineers who already maintain adaptive residual, talent, or hybrid sort routers.
+Aimed at readers who already have a residual path and whose series can dwell.
 
 ---
 
@@ -11,7 +11,7 @@ Most adaptive residual menus decide with **one soft signal**.
 
 Runs. Cardinality. Entropy. A CDF estimate. A learned classifier. A single disorder metric that routes to Counting, Radix, Quick, pdqsort, ska_sort, or a residual talent.
 
-At the *borderline* — where the signal is weak, noisy, or near a threshold — that single key is not enough. You still open a residual path on evidence that would not survive a second independent check. Or you refuse a path that a second solid signal would have confirmed.
+At the *borderline* — where the signal is weak, noisy, or near a threshold — that single key is not enough. You still open a residual path on evidence that would not survive a second check. Or you refuse a path that a second solid signal would have confirmed.
 
 Single-signal residual ownership is the default in the field. It is also the failure mode at the edge.
 
@@ -37,15 +37,18 @@ Thresholds are **immutable**. That is the oracle property. Parameterizing them w
 
 This is not a sorter. It is not a claim about soft@1.20. It is a **locked decision primitive** that answers one question: do classical disorder and σ_Δ jointly own residual, and if so which talent?
 
+On a tie-free polarity stream, σ_Δ is identically 0 and talent is None. Confirm can live only when the strided skeleton contains zeros.
+
 ---
 
 ## Who this is for
 
-- Maintainers of adaptive residual / talent menus inside database kernels, HPC libraries, or hybrid policy layers
-- Anyone already routing to pdqsort / ska_sort / vergesort / Counting / Radix with a **single** threshold or classifier and hitting borderline mis-routes
-- Engineers who want a second solid key they can drop in without adopting a full sort stack
+This primitive confirms only when the polarity stream can dwell (p = 0). Distinct-key / permutation arrays produce no zeros, so σ_Δ ≡ 0 and the oracle is silent. That is a property of the maps, not a routing miss.
 
-If you do not already have a residual path, this note is not for you.
+- Maintainers who already have a residual path and whose series can repeat adjacent sampled values
+- Readers of the borderline suite who want a second key that refuses single-soft traps when σ_Δ is dark
+
+This is not a drop-in second key for unique-key sort routers (pdqsort / ska_sort / Counting / Radix on permutations). If your arrays are tie-free, do not expect confirm. If you do not already have a residual path, this note is not for you.
 
 ---
 
@@ -60,7 +63,7 @@ g++ -std=c++17 -O2 -I. tests/test_borderline_cases.cpp -o test_borderline_cases 
 # → ALL GREEN (test_borderline_cases)
 ```
 
-This is the evidence adaptive-menu engineers need — not soft@ theater.
+This is the evidence for that suite — not soft@ theater.
 
 ## How to verify (stranger path)
 
@@ -95,6 +98,7 @@ Until a written grant is issued, AGPLv3 governs all use. The decision table stay
 ## What this is not
 
 - Not a faster hybrid sort
+- Not a residual router for distinct-key permutations
 - Not a soft@ performance claim (that surface lives on PhotonicSort only)
 - Not a configurable statistical filter
 - Not an invitation to unlock or retune the table
