@@ -124,12 +124,15 @@ g++ -std=c++17 -O2 -I. tests/test_evidence.cpp -o test_evidence && ./test_eviden
 g++ -std=c++17 -O2 -I. tests/test_parity_oracle.cpp -o test_parity_oracle && ./test_parity_oracle
 g++ -std=c++17 -O2 -I. tests/test_borderline_cases.cpp -o test_borderline_cases && ./test_borderline_cases
 g++ -std=c++17 -O2 -I. tests/test_table_lock.cpp -o test_table_lock && ./test_table_lock
+g++ -std=c++17 -O2 -I. tests/test_zero_necessity.cpp -o test_zero_necessity && ./test_zero_necessity
 g++ -std=c++17 -O2 -I. -Itests tests/test_relational_facade.cpp -o test_relational_facade && ./test_relational_facade
 ```
 
 All must print `ALL GREEN`.
 
 `test_table_lock` asserts the existing floors, operators, early returns, stride cliff, and golden T2/T3 pins. It does not change the table.
+
+`test_zero_necessity` pins Galil L2 (injective input ⇒ no polarity zeros ⇒ σ_Δ = 0 ⇒ refuse) and Knuth L1 (classical = 1 − z/T). Assertion only — the table is not rewritten.
 
 Borderline case library (single-soft failure modes vs dual correct refuse/confirm): see `BORDERLINE.md`.
 
