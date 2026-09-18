@@ -123,10 +123,13 @@ Editing the locked constants is never required and is never the supported path.
 g++ -std=c++17 -O2 -I. tests/test_evidence.cpp -o test_evidence && ./test_evidence
 g++ -std=c++17 -O2 -I. tests/test_parity_oracle.cpp -o test_parity_oracle && ./test_parity_oracle
 g++ -std=c++17 -O2 -I. tests/test_borderline_cases.cpp -o test_borderline_cases && ./test_borderline_cases
+g++ -std=c++17 -O2 -I. tests/test_table_lock.cpp -o test_table_lock && ./test_table_lock
 g++ -std=c++17 -O2 -I. -Itests tests/test_relational_facade.cpp -o test_relational_facade && ./test_relational_facade
 ```
 
 All must print `ALL GREEN`.
+
+`test_table_lock` asserts the existing floors, operators, early returns, stride cliff, and golden T2/T3 pins. It does not change the table.
 
 Borderline case library (single-soft failure modes vs dual correct refuse/confirm): see `BORDERLINE.md`.
 
