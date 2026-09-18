@@ -1,6 +1,9 @@
 {
+  "machine_check": "tests/test_table_lock.cpp",
   "test_evidence": "ALL GREEN",
   "test_parity_oracle": "ALL GREEN",
+  "test_borderline_cases": "ALL GREEN",
+  "test_table_lock": "ALL GREEN",
   "controls": {
     "sorted": { "confirmed": false, "suggested": "None" },
     "reverse": { "confirmed": false, "suggested": "None" },
@@ -17,5 +20,38 @@
     "SECOND_SOLID_FLOOR": 0.005,
     "TALENT2_SIGMA_THRESH": 0.1,
     "TALENT3_CLASSICAL": 0.2
-  }
+  },
+  "operators": {
+    "classical_owned": "C > 0.04",
+    "second_solid": "|sigma_delta| >= 0.005",
+    "talent2": "|sigma_delta| > 0.1",
+    "talent3": "C > 0.2"
+  },
+  "floor_cuts": {
+    "C_eq_0.04": "not owned",
+    "abs_sigma_eq_0.005_and_classical_owned": "owned",
+    "abs_sigma_eq_0.1": "not T2",
+    "C_eq_0.2_and_abs_sigma_le_0.1": "T1 not T3"
+  },
+  "goldens": {
+    "noisy_ramp_confirmed_1024_seed_42": {
+      "confirmed": true,
+      "suggested": "T3",
+      "classical": 0.962890625,
+      "sigma_delta": -0.09221529960632324
+    },
+    "moderate_local_disorder_1024_seed_0xB0B0": {
+      "confirmed": false,
+      "suggested": "None",
+      "classical": 1.0,
+      "sigma_delta": 0.0
+    },
+    "biased_walk_t2_1024_seed_8": {
+      "confirmed": true,
+      "suggested": "T2",
+      "classical": 0.7832,
+      "sigma_delta": 0.1897
+    }
+  },
+  "note": "Numeric goldens are asserted by tests/test_table_lock.cpp. Do not retune 0.04 / 0.005 / 0.1 / 0.2 to make a test pass."
 }
