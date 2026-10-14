@@ -19,7 +19,6 @@ of the null rather than as free parameters.
 
 import numpy as np
 
-
 # ---------------------------------------------------------------------------
 # Polarity stream and derived statistics
 # ---------------------------------------------------------------------------
