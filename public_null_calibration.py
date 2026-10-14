@@ -5,16 +5,11 @@ Facade only — does not modify the locked decision table.
 
 Purpose
 -------
-Demonstrate that the locked floors (classical > 0.04 and |σ_Δ| >= 0.005)
-are practical realizations of a high-quantile rule under a null ensemble
-of single-soft traps and pure-noise controls.
+Report two nulls side by side:
+- Pure-trap null (published generators): degenerate at 0. Locked 0.005 is the special case above it.
+- Noise-matched null (additive integer noise amp=15, same as noisy_ramp): non-degenerate. Locked 0.005 sits below its p99.
 
-Also shows a simple, reproducible second statistic (dwell_fraction) that
-separates the same cases without relying on the exact event-mean logic
-of σ_Δ.
-
-Anyone can rerun this script and verify that both floors appear as outputs
-of the null rather than as free parameters.
+Anyone can rerun and see when the locked floors transfer and when they do not.
 """
 
 import numpy as np
@@ -152,16 +147,16 @@ def integer_noise_trap(n, seed, amp=15):
 
 
 # ---------------------------------------------------------------------------
-# Null ensemble and ownership table
+# Dual-null reporting
 # ---------------------------------------------------------------------------
 
 def main():
     n = 512
     n_samples = 200
+    amp = 15
 
-    # Pure published null (degenerate)
-    pure_sigmas = []
-    pure_dwells = []
+    # Pure-trap null
+    pure_sigmas, pure_dwells = [], []
     for i in range(n_samples):
         if i % 4 == 0:
             a = pairwise_swapped(n)
@@ -175,11 +170,10 @@ def main():
         pure_sigmas.append(abs(compute_sigma(stream)))
         pure_dwells.append(dwell_fraction(stream))
 
-    # Noise-matched null (integer additive amp=15, same as noisy_ramp)
-    noise_sigmas = []
-    noise_dwells = []
+    # Noise-matched null
+    noise_sigmas, noise_dwells = [], []
     for i in range(n_samples):
-        a = integer_noise_trap(n, seed=3000 + i, amp=15)
+        a = integer_noise_trap(n, seed=3000 + i, amp=amp)
         stream = polarity_stream(a)
         noise_sigmas.append(abs(compute_sigma(stream)))
         noise_dwells.append(dwell_fraction(stream))
@@ -193,28 +187,31 @@ def main():
     print(f"Pure-trap null (n={n_samples}):")
     print(f"  |σ_Δ|  p99 = {pure_sigma_p99:.6f}")
     print(f"  dwell p99 = {pure_dwell_p99:.6f}")
-    print(f"Noise-matched null (amp=15, n={n_samples}):")
+    print(f"Noise-matched null (amp={amp}, n={n_samples}):")
     print(f"  |σ_Δ|  p99 = {noise_sigma_p99:.6f}")
     print(f"  dwell p99 = {noise_dwell_p99:.6f}")
     print()
-    print("Locked 0.005 is the pure-trap special case; it sits below the noise-matched p99.")
+    print("Locked 0.005 is the pure-trap special case.")
+    print("It sits below the noise-matched |σ_Δ| p99.")
     print()
 
-    # Evaluation cases under noise-matched floors
-    ramp_stream = polarity_stream(noisy_ramp())
+    # Separation for noisy_ramp under each null
+    ramp_stream = polarity_stream(noisy_ramp(amp=amp))
     ramp_s = abs(compute_sigma(ramp_stream))
     ramp_d = dwell_fraction(ramp_stream)
 
-    print("=== Separation under each null ===")
-    print(f"noisy_ramp |σ_Δ| = {ramp_s:.6f}")
-    print(f"  gap above pure-trap floor 0.005:     {ramp_s - 0.005:.6f}")
-    print(f"  gap above noise-matched p99:        {ramp_s - noise_sigma_p99:.6f}")
-    print(f"noisy_ramp dwell = {ramp_d:.6f}")
-    print(f"  gap above pure-trap p99:            {ramp_d - pure_dwell_p99:.6f}")
-    print(f"  gap above noise-matched p99:        {ramp_d - noise_dwell_p99:.6f}")
+    print("=== noisy_ramp under each null ===")
+    print(f"|σ_Δ| = {ramp_s:.6f}")
+    print(f"  clears pure-trap floor 0.005: {'YES' if ramp_s >= 0.005 else 'no'}")
+    print(f"  clears noise-matched p99:    {'YES' if ramp_s >= noise_sigma_p99 else 'no'}")
+    print(f"dwell = {ramp_d:.6f}")
+    print(f"  clears pure-trap p99:        {'YES' if ramp_d > pure_dwell_p99 else 'no'}")
+    print(f"  clears noise-matched p99:    {'YES' if ramp_d > noise_dwell_p99 else 'no'}")
     print()
-    print("Under pure-trap null: both signals clear.")
-    print("Under noise-matched null: only dwell clears; |σ_Δ| does not.")
+    print("Summary:")
+    print("- Pure-trap null: both signals clear the locked floors.")
+    print("- Noise-matched null: only dwell clears; |σ_Δ| does not.")
+    print("Locked table unchanged.")
 
 
 if __name__ == "__main__":
