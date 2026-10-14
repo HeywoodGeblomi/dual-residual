@@ -196,6 +196,7 @@ def main():
     print(header)
     print("-" * len(header))
 
+    case_points = []
     for name, a in cases:
         stream = polarity_stream(a)
         c = classical(stream)
@@ -205,6 +206,7 @@ def main():
         owned = d > dwell_p99 and s >= 0.005
         flag = "YES" if owned else "no"
         print(f"{name:<28} {c:10.4f} {s:10.6f} {d:8.4f} {flag}")
+        case_points.append((name, d, s, owned))
 
     # Type-I error on held-out null and separation margins
     print()
@@ -225,6 +227,33 @@ def main():
     ramp_d = dwell_fraction(ramp_stream)
     print(f"noisy_ramp |σ_Δ| gap above 0.005: {ramp_s - 0.005:.6f}")
     print(f"noisy_ramp dwell gap above null:   {ramp_d - dwell_p99:.6f}")
+
+    # Visual plot of null cloud and evaluation cases
+    try:
+        import matplotlib.pyplot as plt
+
+        fig, ax = plt.subplots(figsize=(7, 5))
+        ax.scatter(dwells, sigmas, s=12, alpha=0.4, label="null cloud", color="gray")
+        ax.axvline(dwell_p99, color="blue", linestyle="--", linewidth=1, label="dwell p99")
+        ax.axhline(0.005, color="red", linestyle="--", linewidth=1, label="|σ_Δ| floor 0.005")
+
+        for name, d, s, owned in case_points:
+            color = "green" if owned else "orange"
+            ax.scatter([d], [s], s=60, color=color, edgecolor="black", zorder=5)
+            ax.annotate(name, (d, s), textcoords="offset points", xytext=(4, 4), fontsize=8)
+
+        ax.set_xlabel("dwell_fraction")
+        ax.set_ylabel("|σ_Δ|")
+        ax.set_title("Null cloud and ownership (green = owned)")
+        ax.legend(loc="upper right")
+        ax.set_xlim(-0.005, max(0.05, ramp_d * 1.2))
+        ax.set_ylim(-0.002, max(0.02, ramp_s * 1.2))
+        fig.tight_layout()
+        fig.savefig("null_calibration_plot.png", dpi=150)
+        print("\nPlot saved to null_calibration_plot.png")
+        plt.close(fig)
+    except ImportError:
+        print("\n(matplotlib not available; skipping plot)")
 
 
 if __name__ == "__main__":
