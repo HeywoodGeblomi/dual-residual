@@ -172,6 +172,7 @@ def main():
 
     sigma_p99 = np.percentile(sigmas, 99)
     dwell_p99 = np.percentile(dwells, 99)
+    sigma_floor = max(0.005, sigma_p99)
 
     print("=== Public null-calibration artifact ===")
     print(f"Null samples: {n_samples}")
@@ -204,6 +205,26 @@ def main():
         owned = d > dwell_p99 and s >= 0.005
         flag = "YES" if owned else "no"
         print(f"{name:<28} {c:10.4f} {s:10.6f} {d:8.4f} {flag}")
+
+    # Type-I error on held-out null and separation margins
+    print()
+    print("=== Bounds (checkable) ===")
+    held_out = 200
+    false_own = 0
+    for i in range(held_out):
+        a = random_perm(n, 1000 + i) if i % 2 else pairwise_swapped(n)
+        stream = polarity_stream(a)
+        s = abs(compute_sigma(stream))
+        d = dwell_fraction(stream)
+        if d > dwell_p99 and s >= sigma_floor:
+            false_own += 1
+    print(f"Empirical false-own rate (held-out null): {false_own / held_out:.4f}  (design ≤ 0.01)")
+
+    ramp_stream = polarity_stream(noisy_ramp())
+    ramp_s = abs(compute_sigma(ramp_stream))
+    ramp_d = dwell_fraction(ramp_stream)
+    print(f"noisy_ramp |σ_Δ| gap above 0.005: {ramp_s - 0.005:.6f}")
+    print(f"noisy_ramp dwell gap above null:   {ramp_d - dwell_p99:.6f}")
 
 
 if __name__ == "__main__":
