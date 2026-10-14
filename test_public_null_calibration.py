@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 Unit tests for public_null_calibration.py
 
@@ -11,24 +10,25 @@ Run with: python -m pytest test_public_null_calibration.py -v
    or:    python test_public_null_calibration.py
 """
 
-import numpy as np
-import sys
 import os
+import sys
+
+import numpy as np
 
 # Allow running from the repo root
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from public_null_calibration import (
-    polarity_stream,
-    classical,
-    dwell_fraction,
-    compute_sigma,
-    pairwise_swapped,
     alt_high_low,
+    classical,
+    compute_sigma,
+    dwell_fraction,
     moderate_local_disorder,
-    sorted_arr,
-    random_perm,
     noisy_ramp,
+    pairwise_swapped,
+    polarity_stream,
+    random_perm,
+    sorted_arr,
 )
 
 
@@ -143,6 +143,4 @@ if __name__ == "__main__":
             passed += 1
         except AssertionError as e:
             print(f"FAIL  {t.__name__}: {e}")
-        except Exception as e:
-            print(f"ERROR {t.__name__}: {e}")
     print(f"\n{passed}/{len(tests)} passed")
