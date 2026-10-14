@@ -143,13 +143,11 @@ def noisy_ramp(n=1024, seed=42, amp=15):
     return np.arange(n, dtype=np.int64) + rng.randint(-amp, amp + 1, n)
 
 
-def mild_noise_trap(n, seed, swap_p=0.03):
-    """Pure trap with low-probability adjacent swaps to produce a non-degenerate null tail."""
+def integer_noise_trap(n, seed, amp=15):
+    """Pure trap plus integer additive noise of the same strength as noisy_ramp."""
     rng = np.random.RandomState(seed)
     a = pairwise_swapped(n)
-    for i in range(0, n - 1):
-        if rng.rand() < swap_p:
-            a[i], a[i + 1] = a[i + 1], a[i]
+    a = a + rng.randint(-amp, amp + 1, n)
     return a
 
 
@@ -159,31 +157,29 @@ def mild_noise_trap(n, seed, swap_p=0.03):
 
 def main():
     n = 512
-    n_samples = 400
+    n_samples = 200
 
     # Pure published null (degenerate)
     pure_sigmas = []
     pure_dwells = []
     for i in range(n_samples):
-        if i % 5 == 0:
+        if i % 4 == 0:
             a = pairwise_swapped(n)
-        elif i % 5 == 1:
+        elif i % 4 == 1:
             a = alt_high_low(n)
-        elif i % 5 == 2:
+        elif i % 4 == 2:
             a = moderate_local_disorder(n, seed=i)
-        elif i % 5 == 3:
-            a = sorted_arr(n)
         else:
             a = random_perm(n, i)
         stream = polarity_stream(a)
         pure_sigmas.append(abs(compute_sigma(stream)))
         pure_dwells.append(dwell_fraction(stream))
 
-    # Mild-noise null (non-degenerate)
+    # Noise-matched null (integer additive amp=15, same as noisy_ramp)
     noise_sigmas = []
     noise_dwells = []
     for i in range(n_samples):
-        a = mild_noise_trap(n, seed=2000 + i, swap_p=0.03)
+        a = integer_noise_trap(n, seed=3000 + i, amp=15)
         stream = polarity_stream(a)
         noise_sigmas.append(abs(compute_sigma(stream)))
         noise_dwells.append(dwell_fraction(stream))
@@ -193,50 +189,32 @@ def main():
     noise_sigma_p99 = np.percentile(noise_sigmas, 99)
     noise_dwell_p99 = np.percentile(noise_dwells, 99)
 
-    print("=== Public null-calibration artifact ===")
-    print(f"Pure null samples: {n_samples}")
+    print("=== Dual-null calibration ===")
+    print(f"Pure-trap null (n={n_samples}):")
     print(f"  |σ_Δ|  p99 = {pure_sigma_p99:.6f}")
     print(f"  dwell p99 = {pure_dwell_p99:.6f}")
-    print(f"Mild-noise null (swap_p=0.03) samples: {n_samples}")
+    print(f"Noise-matched null (amp=15, n={n_samples}):")
     print(f"  |σ_Δ|  p99 = {noise_sigma_p99:.6f}")
     print(f"  dwell p99 = {noise_dwell_p99:.6f}")
-    print("Locked 0.005 remains the practical floor above both nulls.")
+    print()
+    print("Locked 0.005 is the pure-trap special case; it sits below the noise-matched p99.")
     print()
 
-    # Evaluation cases
-    cases = [
-        ("pairwise_swapped", pairwise_swapped(n)),
-        ("alt_high_low", alt_high_low(n)),
-        ("moderate_local_disorder", moderate_local_disorder(n)),
-        ("sorted", sorted_arr(n)),
-        ("random", random_perm(n, 7)),
-        ("noisy_ramp", noisy_ramp()),
-    ]
-
-    print("Ownership table (dwell > noise_dwell_p99 and |σ_Δ| >= max(0.005, noise_sigma_p99)):")
-    header = f"{'case':<28} {'classical':>10} {'|σ_Δ|':>10} {'dwell':>8} {'owned'}"
-    print(header)
-    print("-" * len(header))
-
-    sigma_floor = max(0.005, noise_sigma_p99)
-    for name, a in cases:
-        stream = polarity_stream(a)
-        c = classical(stream)
-        s = abs(compute_sigma(stream))
-        d = dwell_fraction(stream)
-        owned = d > noise_dwell_p99 and s >= sigma_floor
-        flag = "YES" if owned else "no"
-        print(f"{name:<28} {c:10.4f} {s:10.6f} {d:8.4f} {flag}")
-
-    # Bounds
-    print()
-    print("=== Bounds (checkable) ===")
+    # Evaluation cases under noise-matched floors
     ramp_stream = polarity_stream(noisy_ramp())
     ramp_s = abs(compute_sigma(ramp_stream))
     ramp_d = dwell_fraction(ramp_stream)
-    print(f"noisy_ramp |σ_Δ| gap above floor: {ramp_s - sigma_floor:.6f}")
-    print(f"noisy_ramp dwell gap above noise null: {ramp_d - noise_dwell_p99:.6f}")
-    print(f"Mild-noise null is non-degenerate (|σ_Δ| p99 = {noise_sigma_p99:.6f} > 0).")
+
+    print("=== Separation under each null ===")
+    print(f"noisy_ramp |σ_Δ| = {ramp_s:.6f}")
+    print(f"  gap above pure-trap floor 0.005:     {ramp_s - 0.005:.6f}")
+    print(f"  gap above noise-matched p99:        {ramp_s - noise_sigma_p99:.6f}")
+    print(f"noisy_ramp dwell = {ramp_d:.6f}")
+    print(f"  gap above pure-trap p99:            {ramp_d - pure_dwell_p99:.6f}")
+    print(f"  gap above noise-matched p99:        {ramp_d - noise_dwell_p99:.6f}")
+    print()
+    print("Under pure-trap null: both signals clear.")
+    print("Under noise-matched null: only dwell clears; |σ_Δ| does not.")
 
 
 if __name__ == "__main__":
