@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 Public null-calibration artifact for Dual Residual.
 
