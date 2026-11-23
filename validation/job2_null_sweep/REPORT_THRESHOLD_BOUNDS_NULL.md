@@ -10,6 +10,7 @@ This is not a real-data study. Reported MIT-BIH tie rates are used only as a tar
 |---|---|
 | Locked core commit | `ba2ea5717863ae70497aed51514f9db2c0653b22` |
 | `dual_residual.hpp` blob | `13d5c5913a4f26142f08725edd33c7c98b63a574` |
+| Validation artifacts | `bad5e7729f341584edbb52fa18d4bfdf24d01f02` |
 | Trials per cell | 4000 |
 | Master seed | `0xD0A15EED20261123` |
 | Trial CSV sha256 | `9eb5b929ce7a72498c9bcbc92a895d67c5df2d075fed9ffb9a13fa59d52d178b` |
