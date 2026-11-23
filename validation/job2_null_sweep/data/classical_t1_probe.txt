@@ -1,0 +1,20 @@
+classical formula window on the sign-stream lengths the core uses
+T=63  tie count z in [51, 60]  tie rate [0.809524, 0.952381]  classical [0.04761905, 0.19047619]
+         just outside: z=50 classical=0.20634921 (above 0.2)  z=61 classical=0.03174603 (not above 0.04)
+         float32 (T-z)/T vs 1-z/T mismatches 39 / 64, max abs gap 5.960e-08
+T=255  tie count z in [204, 244]  tie rate [0.800000, 0.956863]  classical [0.04313726, 0.20000000]
+         just outside: z=203 classical=0.20392157 (above 0.2)  z=245 classical=0.03921569 (not above 0.04)
+         float32 (T-z)/T vs 1-z/T mismatches 159 / 256, max abs gap 5.960e-08
+T=511  tie count z in [409, 490]  tie rate [0.800391, 0.958904]  classical [0.04109589, 0.19960861]
+         just outside: z=408 classical=0.20156556 (above 0.2)  z=491 classical=0.03913894 (not above 0.04)
+         float32 (T-z)/T vs 1-z/T mismatches 212 / 512, max abs gap 5.960e-08
+T=512  tie count z in [410, 491]  tie rate [0.800781, 0.958984]  classical [0.04101562, 0.19921875]
+         just outside: z=409 classical=0.20117188 (above 0.2)  z=492 classical=0.03906250 (not above 0.04)
+         float32 (T-z)/T vs 1-z/T mismatches 0 / 513, max abs gap 0.000e+00
+
+constructed evidence() search for T1
+T1 n=64 T=63 tie=0.857143 classical=0.14285715 sigma= 0.08333334 leaves=7 neg=0,1 pad=0
+T1 n=256 T=255 tie=0.956863 classical=0.04313726 sigma= 0.05000000 leaves=9 neg=0,1 pad=0
+T1 n=512 T=511 tie=0.958904 classical=0.04109589 sigma= 0.01111111 leaves=19 neg=0,1 pad=0
+T1 n=513 T=512 tie=0.958984 classical=0.04101562 sigma= 0.01111111 leaves=19 neg=0,1 pad=0
+constructed T1 hits: 4

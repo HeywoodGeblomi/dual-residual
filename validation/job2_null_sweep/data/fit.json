@@ -1,0 +1,54 @@
+{
+  "trials_per_cell": 4000,
+  "n_rows": 180000,
+  "gt_ge_mismatch_rows": 0,
+  "bound_wilson_upper": 0.05,
+  "focus": {
+    "family": "rw_q",
+    "step": "0.3"
+  },
+  "focus_logistic_log_n_events": {
+    "n": 20000,
+    "rate": 0.39825,
+    "saturated": false,
+    "converged": true,
+    "a": -0.6519930169446205,
+    "b": 0.05579030924162505
+  },
+  "focus_plateau_same_event_scale": [
+    {
+      "n": 1024,
+      "stride": 1,
+      "fraction_window_read": 0.5009765625,
+      "mean_zero_rate": 0.11902343624999961,
+      "mean_n_events": 126.66475,
+      "fpr_sigma_gt": 0.404,
+      "sigma_gt_lo": 0.3888925316707988,
+      "sigma_gt_hi": 0.419291681440824,
+      "fpr_confirmed": 0.404
+    },
+    {
+      "n": 4096,
+      "stride": 8,
+      "fraction_window_read": 0.9982910156,
+      "mean_zero_rate": 0.042192830999999945,
+      "mean_n_events": 127.57925,
+      "fpr_sigma_gt": 0.41375,
+      "sigma_gt_lo": 0.398577250952342,
+      "sigma_gt_hi": 0.42908825301513165,
+      "fpr_confirmed": 0.41375
+    },
+    {
+      "n": 16384,
+      "stride": 32,
+      "fraction_window_read": 0.9981079102,
+      "mean_zero_rate": 0.021095818250000002,
+      "mean_n_events": 127.69925,
+      "fpr_sigma_gt": 0.392,
+      "sigma_gt_lo": 0.3769814304513701,
+      "sigma_gt_hi": 0.4072258092992055,
+      "fpr_confirmed": 0.392
+    }
+  ],
+  "bins_meeting_bound": []
+}

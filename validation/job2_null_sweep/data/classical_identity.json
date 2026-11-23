@@ -1,0 +1,7 @@
+{
+  "rows": 180000,
+  "max_abs_printed_classical_minus_float32_ratio": 0.0,
+  "max_abs_printed_classical_minus_float32_one_minus_tie": 5.960464477539063e-08,
+  "trials_with_classical_le_0p2": 0,
+  "t1_count": 0
+}
