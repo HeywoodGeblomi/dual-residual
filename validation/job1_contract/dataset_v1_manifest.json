@@ -1,0 +1,87 @@
+{
+ "tier_counts": {
+  "DS1_N64": {
+   "None": 216320,
+   "T1": 1359,
+   "T2": 3331,
+   "T3": 1604,
+   "excluded_VFL": 818
+  },
+  "DS1_N256": {
+   "None": 50925,
+   "T1": 1084,
+   "T2": 3207,
+   "T3": 433,
+   "excluded_VFL": 209
+  },
+  "DS1_N1024": {
+   "None": 10858,
+   "T1": 562,
+   "T2": 2333,
+   "T3": 139,
+   "excluded_VFL": 56
+  },
+  "DS1_N4096": {
+   "None": 2146,
+   "T1": 284,
+   "T2": 970,
+   "T3": 59,
+   "excluded_VFL": 17
+  },
+  "DS1_N16384": {
+   "None": 368,
+   "T1": 109,
+   "T2": 336,
+   "T3": 37,
+   "excluded_VFL": 8
+  },
+  "DS2_N64": {
+   "None": 217893,
+   "T1": 2225,
+   "T2": 3152,
+   "T3": 162,
+   "excluded_VFL": 0
+  },
+  "DS2_N256": {
+   "None": 50507,
+   "T1": 2185,
+   "T2": 3108,
+   "T3": 58,
+   "excluded_VFL": 0
+  },
+  "DS2_N1024": {
+   "None": 10653,
+   "T1": 958,
+   "T2": 2308,
+   "T3": 29,
+   "excluded_VFL": 0
+  },
+  "DS2_N4096": {
+   "None": 2138,
+   "T1": 321,
+   "T2": 996,
+   "T3": 21,
+   "excluded_VFL": 0
+  },
+  "DS2_N16384": {
+   "None": 415,
+   "T1": 106,
+   "T2": 319,
+   "T3": 18,
+   "excluded_VFL": 0
+  }
+ },
+ "sha256": {
+  "DS1_N1024.csv": "aecab207299d4699e67e52da528707385cb19ba42de629700dc1a035e0f09372",
+  "DS1_N16384.csv": "9a2dd28b26808d902c9c7f7093ea81906b60bf9dac956954f14b1e64897d6510",
+  "DS1_N256.csv": "2b2a708072c4646dd773d68d5f627bb38a9eef17eb62420461f97b09db34eec3",
+  "DS1_N4096.csv": "e1e5855d9805fd3ad6370f22c2312365e8ad688d1402c22128acd8d542bf4591",
+  "DS1_N64.csv": "c66cf156050fbe8ae0e626633df22c4092f006916685183d0a71317442941692",
+  "DS2_N1024.csv": "4923fad881c2666f971335195dbf91b0e8b78f04086f6f21052e6ebc0720090c",
+  "DS2_N16384.csv": "09ae7f13bd9b91585098beff4e03ca2047640118a6234f55f3f35f43c730b213",
+  "DS2_N256.csv": "c856d727cef483357bef932b2aea47682dfdddae538b2d436ef1cdb071bde01c",
+  "DS2_N4096.csv": "721ac3cb263ef0769812c7b8e92296db0cd8da41658ae19a10143c8ee7cf3901",
+  "DS2_N64.csv": "2c41964989fb0140ec37b321bf38b64ae8958e9b998af26dd4b0263c93e13a17"
+ },
+ "rules": "T3 if window overlaps any record-level run of >=3 consecutive AAMI V beats; windows overlapping a (VFL episode or any ! flutter wave excluded"
+}

@@ -1,0 +1,68 @@
+{
+ "id": "T1v00",
+ "definition": "BASELINE (not a candidate): unmodified ba2ea57 sigma, reproduction check only",
+ "code_sha256": "73e3b3d586f779d3d828aeacc028ce3c42747d4d928b1abd7a1443f5e41a8865",
+ "results": {
+  "1024": {
+   "windows": 13892,
+   "flip": 0.3309818600633458,
+   "tier_share": {
+    "None": 0.5689605528361646,
+    "T1": 0.0,
+    "T2": 0.14202418658220559,
+    "T3": 0.28901526058162974
+   },
+   "top_tier": "None",
+   "top_share": 0.5689605528361646,
+   "V": 2472,
+   "Nn": 10858,
+   "medS_V": 0.0,
+   "medS_None": 0.0,
+   "meanS_V": 0.034975042247174244,
+   "meanS_None": 0.03616915424459875,
+   "mw_p": 0.8022960652668086,
+   "own_V": 0.4223300970873786,
+   "own_V_shuf": 0.3377831715210356,
+   "shuf_gap": 0.08454692556634302,
+   "mcnemar_b": 680,
+   "mcnemar_c": 471,
+   "shuf_p": 3.939262859821884e-10,
+   "own_None": 0.43240007367839384,
+   "bar1": false,
+   "bar2": false,
+   "bar3": true,
+   "bar4": false
+  },
+  "4096": {
+   "windows": 3459,
+   "flip": 0.28418618097716103,
+   "tier_share": {
+    "None": 0.5669268574732582,
+    "T1": 0.0,
+    "T2": 0.03498120844174617,
+    "T3": 0.39809193408499566
+   },
+   "top_tier": "None",
+   "top_share": 0.5669268574732582,
+   "V": 1029,
+   "Nn": 2146,
+   "medS_V": 0.0,
+   "medS_None": 0.0,
+   "meanS_V": 0.02324361941325537,
+   "meanS_None": 0.021573407868859043,
+   "mw_p": 0.10544492012226786,
+   "own_V": 0.4402332361516035,
+   "own_V_shuf": 0.35471331389698735,
+   "shuf_gap": 0.08551992225461613,
+   "mcnemar_b": 293,
+   "mcnemar_c": 205,
+   "shuf_p": 4.654520739520812e-05,
+   "own_None": 0.42684063373718545,
+   "bar1": false,
+   "bar2": false,
+   "bar3": true,
+   "bar4": false
+  },
+  "PASS_ALL": false
+ }
+}

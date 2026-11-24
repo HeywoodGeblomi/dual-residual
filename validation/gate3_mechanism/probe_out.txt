@@ -1,0 +1,15 @@
+tie=0.05 N=   64  first<=0: 2113, of those sigma==0 exactly: 2113 | first>0: 1887, owned: 1349 | owned overall 0.337 | 1-sample flips 0.368, of which first-sign changed 0.974
+tie=0.05 N=  256  first<=0: 2112, of those sigma==0 exactly: 2112 | first>0: 1888, owned: 1579 | owned overall 0.395 | 1-sample flips 0.428, of which first-sign changed 0.994
+tie=0.05 N= 1024  first<=0: 2094, of those sigma==0 exactly: 2094 | first>0: 1906, owned: 1640 | owned overall 0.410 | 1-sample flips 0.446, of which first-sign changed 0.996
+tie=0.05 N= 4096  first<=0: 2448, of those sigma==0 exactly: 2448 | first>0: 1552, owned: 1467 | owned overall 0.367 | 1-sample flips 0.278, of which first-sign changed 0.497
+tie=0.05 N=16384  first<=0: 2160, of those sigma==0 exactly: 2160 | first>0: 1840, owned: 1649 | owned overall 0.412 | 1-sample flips 0.214, of which first-sign changed 0.311
+tie=0.20 N=   64  first<=0: 2389, of those sigma==0 exactly: 2389 | first>0: 1611, owned: 1419 | owned overall 0.355 | 1-sample flips 0.444, of which first-sign changed 0.961
+tie=0.20 N=  256  first<=0: 2364, of those sigma==0 exactly: 2364 | first>0: 1636, owned: 1539 | owned overall 0.385 | 1-sample flips 0.450, of which first-sign changed 0.982
+tie=0.20 N= 1024  first<=0: 2379, of those sigma==0 exactly: 2379 | first>0: 1621, owned: 1538 | owned overall 0.385 | 1-sample flips 0.448, of which first-sign changed 0.991
+tie=0.20 N= 4096  first<=0: 2388, of those sigma==0 exactly: 2388 | first>0: 1612, owned: 1479 | owned overall 0.370 | 1-sample flips 0.296, of which first-sign changed 0.472
+tie=0.20 N=16384  first<=0: 2128, of those sigma==0 exactly: 2128 | first>0: 1872, owned: 1684 | owned overall 0.421 | 1-sample flips 0.223, of which first-sign changed 0.303
+tie=0.40 N=   64  first<=0: 2788, of those sigma==0 exactly: 2788 | first>0: 1212, owned: 1062 | owned overall 0.266 | 1-sample flips 0.375, of which first-sign changed 0.981
+tie=0.40 N=  256  first<=0: 2772, of those sigma==0 exactly: 2772 | first>0: 1228, owned: 1165 | owned overall 0.291 | 1-sample flips 0.404, of which first-sign changed 0.989
+tie=0.40 N= 1024  first<=0: 2762, of those sigma==0 exactly: 2762 | first>0: 1238, owned: 1197 | owned overall 0.299 | 1-sample flips 0.405, of which first-sign changed 0.995
+tie=0.40 N= 4096  first<=0: 2354, of those sigma==0 exactly: 2354 | first>0: 1646, owned: 1541 | owned overall 0.385 | 1-sample flips 0.282, of which first-sign changed 0.485
+tie=0.40 N=16384  first<=0: 2180, of those sigma==0 exactly: 2180 | first>0: 1820, owned: 1644 | owned overall 0.411 | 1-sample flips 0.232, of which first-sign changed 0.308
