@@ -112,6 +112,8 @@ The preregistered prediction was wrong.
 That prediction said at least one candidate would pass at both N.
 
 An independent second harness, built separately, agreed with the blind run on all 32 pass or fail calls (4 bars, 4 candidates, 2 sizes).
+The second harness first ran the four preregistered candidates (V2-C1, V2-C2, V2-C3, V2-T6) before the prereg was frozen, against the same unchanged prereg file (sha256 starting f2d87c61).
+Its results were kept sealed until the blind run was posted.
 Those logs are in `validation/core_v2_results/`.
 
 ## Limits
