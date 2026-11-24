@@ -20,7 +20,7 @@ That split is the de Chazal inter-patient split.
 
 DS2 is sealed on the honor system.
 DS2 has not been read.
-DS2 is reserved for one scoring run of a single frozen v2 candidate.
+DS2 stays sealed and unscored.
 
 ## Job 1 contract
 
@@ -86,18 +86,32 @@ At N=4096 they are 20% to 50%.
 That spread is attributed to the stride-8 sampling lattice.
 None passed every bar.
 
-## Next step
+## Core v2
 
 Folders: `sigma_candidates/` and `core_v2_prereg/`.
 
 The owner authorized changing σ_Δ and the sampling together.
-Candidates and bars were frozen before any run.
-Results are pending.
-They are not in this record.
+Core v2 was preregistered and frozen before the blind run.
 
-Running try count: 13.
-With a further preregistered set, the count goes up to 17.
-Any win must be reported with the try count.
+On DS1, no candidate passed every preregistered bar at both N=1024 and N=4096.
+No candidate was picked.
+DS2 stays sealed and unscored.
+
+17 tries are logged.
+
+Full-sample reading, or lag without decimation, brought tier flips to 2% or less at both N.
+That holds in all six tries that used it.
+Block-mean decimation still flipped 15% to 35% at N=4096.
+
+The closest try was T2v01.
+It failed only the top-tier cap at N=1024.
+That share was 81.6% against an 80% cap.
+
+The bars were not changed after seeing results.
+The preregistered prediction was wrong.
+That prediction said at least one candidate would pass at both N.
+
+A cross-check of the blind run is still pending.
 
 ## Limits
 
@@ -116,14 +130,20 @@ The database is not redistributed here.
 
 This work was prepared with AI assistants.
 
+## Downstream checks
+
+The separate A-to-ratio Lean proof is a toy-model result: https://github.com/HeywoodGeblomi/omega-ed6-uniqueness-lemma/tree/main/a_to_ratio (commit `02bf94c`).
+Its README carries the sign caveat.
+The 2:1 becomes about 1.40 under the other sign choice.
+
 ## Folder index
 
 | Folder | What it holds |
 | --- | --- |
 | `bridge/` | A small CLI over the unmodified core, Python variants that swap gap rules, and the bridge result log. |
-| `cleanroom_diff/` | Comparison harness, edge-window generator, and the written diff summary. Large result tables are not included. |
+| `cleanroom_diff/` | Comparison harness, ablation scripts, and the slim result tables. The edge suite file and the largest per-window dumps are not included. |
 | `cleanroom_statement_check/` | Frozen clean-room spec, the reference rule, and the freeze hash list. |
-| `core_v2_prereg/` | Preregistered v2 candidates. Sampling and σ_Δ change together. No results yet. |
+| `core_v2_prereg/` | Preregistered v2 candidates. Sampling and σ_Δ change together. The blind-run result files are not in this folder. |
 | `edge_cases/` | Synthetic edge-case builder, a case index, and frozen reference outputs. The case waveform files are not included. |
 | `gate3_mechanism/` | Mechanism note, the probe program, and the probe output. |
 | `gate_logs/` | Gate checklist and the Gate 3 failure log. |
@@ -134,13 +154,17 @@ This work was prepared with AI assistants.
 
 ## What was left out
 
-Hash lists were checked and not edited.
-Every listed file that is present matches its hash.
-Some list entries point at files that were left out on purpose.
+Hash lists that came in the packages were not edited.
+`cleanroom_diff/PUBLISH_MANIFEST.sha256` matches the 33 files it names.
+Its own sha256 is `2a6866d929763c7e7eae4da9140fd95be3d50608405d90411b97109b15fd1596`.
 
-Left out:
+`cleanroom_diff/MANIFEST.sha256` is the earlier full list.
+It is unchanged.
+Some of its entries are files the slim copy leaves out.
+
+Still left out:
 
 - MIT-BIH `.hea`, `.dat`, and `.atr` files named in `job1_contract/mitdb_files_v0.sha256` (144 files).
 - Synthetic case waveforms named in `edge_cases/manifest.csv` (137 files).
-- Large clean-room dumps and ablation scripts named in `cleanroom_diff/MANIFEST.sha256` (result CSVs, the edge suite, and ablation code).
-- A second copy of the core header. `bridge/BRIDGE_v1.sha256` names `dual_residual.hpp`. That hash matches the header already in the repo. It is not copied into this folder.
+- A second copy of the core header. `bridge/BRIDGE_v1.sha256` names `dual_residual.hpp`. That hash matches the header already in the repo.
+- From the clean-room slim copy: compiled binaries, the 27 MB edge suite (its sha256 is in `edge/edge_suite.jsonl.sha256`), per-window dumps over 4 MB, and the v2 candidate run files.
