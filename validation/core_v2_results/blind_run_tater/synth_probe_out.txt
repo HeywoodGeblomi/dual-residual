@@ -1,0 +1,22 @@
+P1 samplers identical to ba2ea57 at n<=1024, and harness2(core sampler)==sigma_tinker harness: 143 /300
+P1 lengths at 4096: core 511 lag 4088 block 511 full 4095
+P2 synth N=4096 sampler=core  sigma=T1v05: flip 0.020 tiers(None,T1,T2,T3) [5, 0, 0, 295]  0.02 ms/window
+P2 synth N=4096 sampler=core  sigma=T1v06: flip 0.437 tiers(None,T1,T2,T3) [24, 0, 215, 61]  0.02 ms/window
+P2 synth N=4096 sampler=core  sigma=C1: flip 0.353 tiers(None,T1,T2,T3) [87, 0, 0, 213]  0.08 ms/window
+P2 synth N=4096 sampler=core  sigma=C2: flip 0.443 tiers(None,T1,T2,T3) [90, 0, 0, 210]  0.06 ms/window
+P2 synth N=4096 sampler=core  sigma=C3: flip 0.327 tiers(None,T1,T2,T3) [64, 0, 0, 236]  0.09 ms/window
+P2 synth N=4096 sampler=lag   sigma=T1v05: flip 0.003 tiers(None,T1,T2,T3) [6, 0, 2, 292]  0.04 ms/window
+P2 synth N=4096 sampler=lag   sigma=T1v06: flip 0.000 tiers(None,T1,T2,T3) [7, 0, 137, 156]  0.04 ms/window
+P2 synth N=4096 sampler=lag   sigma=C1: flip 0.000 tiers(None,T1,T2,T3) [0, 0, 0, 300]  0.82 ms/window
+P2 synth N=4096 sampler=lag   sigma=C2: flip 0.000 tiers(None,T1,T2,T3) [253, 0, 0, 47]  0.53 ms/window
+P2 synth N=4096 sampler=lag   sigma=C3: flip 0.000 tiers(None,T1,T2,T3) [27, 0, 0, 273]  0.52 ms/window
+P2 synth N=4096 sampler=block sigma=T1v05: flip 0.063 tiers(None,T1,T2,T3) [4, 0, 11, 285]  0.03 ms/window
+P2 synth N=4096 sampler=block sigma=T1v06: flip 0.333 tiers(None,T1,T2,T3) [83, 0, 217, 0]  0.03 ms/window
+P2 synth N=4096 sampler=block sigma=C1: flip 0.267 tiers(None,T1,T2,T3) [61, 0, 0, 239]  0.09 ms/window
+P2 synth N=4096 sampler=block sigma=C2: flip 0.433 tiers(None,T1,T2,T3) [207, 0, 0, 93]  0.07 ms/window
+P2 synth N=4096 sampler=block sigma=C3: flip 0.263 tiers(None,T1,T2,T3) [59, 0, 0, 241]  0.07 ms/window
+P2 synth N=4096 sampler=full  sigma=T1v05: flip 0.017 tiers(None,T1,T2,T3) [37, 0, 0, 263]  0.04 ms/window
+P2 synth N=4096 sampler=full  sigma=T1v06: flip 0.003 tiers(None,T1,T2,T3) [30, 0, 8, 262]  0.04 ms/window
+P2 synth N=4096 sampler=full  sigma=C1: flip 0.010 tiers(None,T1,T2,T3) [108, 0, 0, 192]  0.60 ms/window
+P2 synth N=4096 sampler=full  sigma=C2: flip 0.017 tiers(None,T1,T2,T3) [72, 0, 0, 228]  0.51 ms/window
+P2 synth N=4096 sampler=full  sigma=C3: flip 0.017 tiers(None,T1,T2,T3) [84, 0, 0, 216]  0.54 ms/window

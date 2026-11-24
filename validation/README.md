@@ -111,7 +111,8 @@ The bars were not changed after seeing results.
 The preregistered prediction was wrong.
 That prediction said at least one candidate would pass at both N.
 
-A cross-check of the blind run is still pending.
+An independent second harness, built separately, agreed with the blind run on all 32 pass or fail calls (4 bars, 4 candidates, 2 sizes).
+Those logs are in `validation/core_v2_results/`.
 
 ## Limits
 
@@ -144,6 +145,7 @@ The 2:1 becomes about 1.40 under the other sign choice.
 | `cleanroom_diff/` | Comparison harness, ablation scripts, and the slim result tables. The edge suite file and the largest per-window dumps are not included. |
 | `cleanroom_statement_check/` | Frozen clean-room spec, the reference rule, and the freeze hash list. |
 | `core_v2_prereg/` | Preregistered v2 candidates. Sampling and σ_Δ change together. The blind-run result files are not in this folder. |
+| `core_v2_results/` | The blind run and the independent cross-check. DS1 only. |
 | `edge_cases/` | Synthetic edge-case builder, a case index, and frozen reference outputs. The case waveform files are not included. |
 | `gate3_mechanism/` | Mechanism note, the probe program, and the probe output. |
 | `gate_logs/` | Gate checklist and the Gate 3 failure log. |
