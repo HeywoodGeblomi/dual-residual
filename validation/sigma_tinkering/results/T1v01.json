@@ -1,0 +1,68 @@
+{
+ "id": "T1v01",
+ "definition": "Dwell parity: all crossings of the tie-held sign stream; value = complete dwell length; even-odd by event index (= rising-run vs falling-run length), normalized (me-mo)/(me+mo)",
+ "code_sha256": "e977c3b64ceb764ecd59e163cf507059de9f181110232d59fc97167da43fcd3a",
+ "results": {
+  "1024": {
+   "windows": 13892,
+   "flip": 0.028361646991073998,
+   "tier_share": {
+    "None": 0.05017276130146847,
+    "T1": 0.0,
+    "T2": 0.17420097898070833,
+    "T3": 0.7756262597178232
+   },
+   "top_tier": "T3",
+   "top_share": 0.7756262597178232,
+   "V": 2472,
+   "Nn": 10858,
+   "medS_V": 0.052118102088570595,
+   "medS_None": 0.051393814384937286,
+   "meanS_V": 0.059691903928397405,
+   "meanS_None": 0.0593568187315614,
+   "mw_p": 0.17611285785393627,
+   "own_V": 0.9518608414239482,
+   "own_V_shuf": 0.8389967637540453,
+   "shuf_gap": 0.11286407766990292,
+   "mcnemar_b": 372,
+   "mcnemar_c": 93,
+   "shuf_p": 7.318467241932984e-41,
+   "own_None": 0.9491619082703997,
+   "bar1": false,
+   "bar2": true,
+   "bar3": true,
+   "bar4": true
+  },
+  "4096": {
+   "windows": 3459,
+   "flip": 0.20005782017924256,
+   "tier_share": {
+    "None": 0.036715813819022836,
+    "T1": 0.0,
+    "T2": 0.30875975715524717,
+    "T3": 0.6545244290257299
+   },
+   "top_tier": "T3",
+   "top_share": 0.6545244290257299,
+   "V": 1029,
+   "Nn": 2146,
+   "medS_V": 0.07297830283641815,
+   "medS_None": 0.06479855254292488,
+   "meanS_V": 0.07571110682350375,
+   "meanS_None": 0.07554718962394949,
+   "mw_p": 0.020421259028255156,
+   "own_V": 0.9727891156462585,
+   "own_V_shuf": 0.8610301263362488,
+   "shuf_gap": 0.11175898931000972,
+   "mcnemar_b": 140,
+   "mcnemar_c": 25,
+   "shuf_p": 6.736759819758082e-21,
+   "own_None": 0.9557315936626282,
+   "bar1": false,
+   "bar2": false,
+   "bar3": true,
+   "bar4": true
+  },
+  "PASS_ALL": false
+ }
+}

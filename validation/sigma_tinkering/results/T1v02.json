@@ -1,0 +1,68 @@
+{
+ "id": "T1v02",
+ "definition": "Flat-turn parity: all crossings (tie-held); value = 1 if the turn passes through a tie; even-odd by event index (= flat peaks vs flat troughs share); tie-free -> 0",
+ "code_sha256": "affde40b3f0d65160fc8f9e81b5516741b9658dc3943f1af8d683a3cfddc77db",
+ "results": {
+  "1024": {
+   "windows": 13892,
+   "flip": 0.023898646703138498,
+   "tier_share": {
+    "None": 0.0842931183414915,
+    "T1": 0.0,
+    "T2": 0.122372588540167,
+    "T3": 0.7933342931183415
+   },
+   "top_tier": "T3",
+   "top_share": 0.7933342931183415,
+   "V": 2472,
+   "Nn": 10858,
+   "medS_V": 0.04438364505767822,
+   "medS_None": 0.04317250847816467,
+   "meanS_V": 0.05174452776606775,
+   "meanS_None": 0.05159928406526055,
+   "mw_p": 0.2678682831924132,
+   "own_V": 0.9061488673139159,
+   "own_V_shuf": 0.735032362459547,
+   "shuf_gap": 0.1711165048543689,
+   "mcnemar_b": 583,
+   "mcnemar_c": 160,
+   "shuf_p": 1.3343450063986465e-57,
+   "own_None": 0.9179406888929821,
+   "bar1": false,
+   "bar2": true,
+   "bar3": true,
+   "bar4": true
+  },
+  "4096": {
+   "windows": 3459,
+   "flip": 0.24168834923388263,
+   "tier_share": {
+    "None": 0.1196877710320902,
+    "T1": 0.0,
+    "T2": 0.015900549291702804,
+    "T3": 0.864411679676207
+   },
+   "top_tier": "T3",
+   "top_share": 0.864411679676207,
+   "V": 1029,
+   "Nn": 2146,
+   "medS_V": 0.025632912293076515,
+   "medS_None": 0.02246897481381893,
+   "meanS_V": 0.03147925962021688,
+   "meanS_None": 0.028207502699797812,
+   "mw_p": 0.0008911030753677063,
+   "own_V": 0.880466472303207,
+   "own_V_shuf": 0.7201166180758017,
+   "shuf_gap": 0.16034985422740522,
+   "mcnemar_b": 252,
+   "mcnemar_c": 87,
+   "shuf_p": 4.717866394547441e-20,
+   "own_None": 0.8811742777260019,
+   "bar1": true,
+   "bar2": false,
+   "bar3": false,
+   "bar4": true
+  },
+  "PASS_ALL": false
+ }
+}

@@ -1,0 +1,68 @@
+{
+ "id": "T1v06",
+ "definition": "Plateau parity: all tie-held crossings; value = ties inside each complete dwell; (sum even - sum odd)/sum = rising- vs falling-run share of plateau time; tie-free -> 0",
+ "code_sha256": "12883e336d4b2e108b39bde9db1f8ab8e8d307657c6236473e6ed16b944837f5",
+ "results": {
+  "1024": {
+   "windows": 13892,
+   "flip": 0.02987330837892312,
+   "tier_share": {
+    "None": 0.04326230924272963,
+    "T1": 0.0,
+    "T2": 0.49654477397063057,
+    "T3": 0.4601929167866398
+   },
+   "top_tier": "T2",
+   "top_share": 0.49654477397063057,
+   "V": 2472,
+   "Nn": 10858,
+   "medS_V": 0.10696948692202568,
+   "medS_None": 0.09803921729326248,
+   "meanS_V": 0.1258104757965666,
+   "meanS_None": 0.11717713218395728,
+   "mw_p": 3.0160177666757302e-05,
+   "own_V": 0.9522653721682848,
+   "own_V_shuf": 0.8127022653721683,
+   "shuf_gap": 0.1395631067961165,
+   "mcnemar_b": 442,
+   "mcnemar_c": 97,
+   "shuf_p": 6.835956205255699e-54,
+   "own_None": 0.957819119543194,
+   "bar1": true,
+   "bar2": true,
+   "bar3": true,
+   "bar4": true
+  },
+  "4096": {
+   "windows": 3459,
+   "flip": 0.4350968488002313,
+   "tier_share": {
+    "None": 0.0731425267418329,
+    "T1": 0.0,
+    "T2": 0.7192830297773923,
+    "T3": 0.20757444348077478
+   },
+   "top_tier": "T2",
+   "top_share": 0.7192830297773923,
+   "V": 1029,
+   "Nn": 2146,
+   "medS_V": 0.20000000298023224,
+   "medS_None": 0.20000000298023224,
+   "meanS_V": 0.23813832610613866,
+   "meanS_None": 0.22123018052092192,
+   "mw_p": 0.006973676423090311,
+   "own_V": 0.9251700680272109,
+   "own_V_shuf": 0.8095238095238095,
+   "shuf_gap": 0.11564625850340138,
+   "mcnemar_b": 179,
+   "mcnemar_c": 60,
+   "shuf_p": 3.0824710129526926e-15,
+   "own_None": 0.929636533084809,
+   "bar1": true,
+   "bar2": false,
+   "bar3": true,
+   "bar4": true
+  },
+  "PASS_ALL": false
+ }
+}

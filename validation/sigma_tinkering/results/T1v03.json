@@ -1,0 +1,68 @@
+{
+ "id": "T1v03",
+ "definition": "Zero-dwell runs: events = maximal tie runs; value = run length; even-odd by run index, normalized (me-mo)/(me+mo); <4 runs -> 0",
+ "code_sha256": "7b2aeeab30a21859519ef586c56694fc04b76e1e8c00aeb2b0cf802bb3ae9b1d",
+ "results": {
+  "1024": {
+   "windows": 13892,
+   "flip": 0.01274114598329974,
+   "tier_share": {
+    "None": 0.12733947595738554,
+    "T1": 0.0,
+    "T2": 0.050748632306363374,
+    "T3": 0.8219118917362511
+   },
+   "top_tier": "T3",
+   "top_share": 0.8219118917362511,
+   "V": 2472,
+   "Nn": 10858,
+   "medS_V": 0.03448275849223137,
+   "medS_None": 0.03489430248737335,
+   "meanS_V": 0.04086477281465922,
+   "meanS_None": 0.04103460443099837,
+   "mw_p": 0.7117470698912237,
+   "own_V": 0.8523462783171522,
+   "own_V_shuf": 0.09061488673139159,
+   "shuf_gap": 0.7617313915857605,
+   "mcnemar_b": 1910,
+   "mcnemar_c": 27,
+   "shuf_p": 0.0,
+   "own_None": 0.8787069441886167,
+   "bar1": false,
+   "bar2": true,
+   "bar3": false,
+   "bar4": true
+  },
+  "4096": {
+   "windows": 3459,
+   "flip": 0.4972535414859786,
+   "tier_share": {
+    "None": 0.4619832321480197,
+    "T1": 0.0,
+    "T2": 0.05724197745013009,
+    "T3": 0.4807747904018502
+   },
+   "top_tier": "T3",
+   "top_share": 0.4807747904018502,
+   "V": 1029,
+   "Nn": 2146,
+   "medS_V": 0.0,
+   "medS_None": 0.032258063554763794,
+   "meanS_V": 0.030598678750228554,
+   "meanS_None": 0.03437655194265853,
+   "mw_p": 0.999951168418103,
+   "own_V": 0.478134110787172,
+   "own_V_shuf": 0.061224489795918366,
+   "shuf_gap": 0.4169096209912536,
+   "mcnemar_b": 455,
+   "mcnemar_c": 26,
+   "shuf_p": 1.151828066907778e-102,
+   "own_None": 0.576421248835042,
+   "bar1": false,
+   "bar2": false,
+   "bar3": true,
+   "bar4": true
+  },
+  "PASS_ALL": false
+ }
+}

@@ -1,0 +1,138 @@
+file,case,N,length,sha256,description
+cases/flat_N64.txt,flat,64,64,34084673eea62ff350a4f45ed28624798db350aac04af096d7a9574899071eff,all samples equal: every comparison ties
+cases/flat_shift1_N64.txt,flat_shift1,64,64,34084673eea62ff350a4f45ed28624798db350aac04af096d7a9574899071eff,all samples equal: every comparison ties (shifted one sample)
+cases/ramp_N64.txt,ramp,64,64,29f3d8a031145c5dcce2c92f1f9be6b22f9fcab0a4a18e99413ecbfb195fcaf6,strictly increasing: no ties
+cases/ramp_shift1_N64.txt,ramp_shift1,64,64,484027755839435c9a5c2fc026a5d78b72da87774c88eb5512ae7b5cc70d7d41,strictly increasing: no ties (shifted one sample)
+cases/alternate_N64.txt,alternate,64,64,40e7f336d65b6c79d269ee417717fa5df4abc7af7b822edeb39575a222aaafe3,"0,1,0,1: every step reverses, no ties"
+cases/alternate_shift1_N64.txt,alternate_shift1,64,64,01a6d2c1327f4cf687cfba8df05c8649cd171e32896f3d29e09c0744c6a92488,"0,1,0,1: every step reverses, no ties (shifted one sample)"
+cases/ramp_jitter_N64.txt,ramp_jitter,64,64,0cc07c61d02518da0dd7aefe83c830c4478b54feebc4bce9c865c38e3a1fbf80,ramp plus +/-1 jitter (Lucas false-alarm case)
+cases/ramp_jitter_shift1_N64.txt,ramp_jitter_shift1,64,64,1a5c0f1cfa7d29efdf3347ac0fb5abf4efdc94bc41060b1989154f6daaaa91f6,ramp plus +/-1 jitter (Lucas false-alarm case) (shifted one sample)
+cases/ties_even_steps_N64.txt,ties_even_steps,64,64,9fba97306659a85eb5ed9eb1dd0684b5d9f4441e2e15ae6d271cddaa30b9dcae,ties on every even-indexed step only
+cases/ties_even_steps_shift1_N64.txt,ties_even_steps_shift1,64,64,1135d5010c0b44cadec9e782f8e0ebbae78f12bd432e81c68441344dc9be7607,ties on every even-indexed step only (shifted one sample)
+cases/ties_odd_steps_N64.txt,ties_odd_steps,64,64,1135d5010c0b44cadec9e782f8e0ebbae78f12bd432e81c68441344dc9be7607,ties on every odd-indexed step only
+cases/ties_odd_steps_shift1_N64.txt,ties_odd_steps_shift1,64,64,4d407f4009f820aa5eaac04280780ad9fd524afe8da6122304dd08fbc0ddbb1e,ties on every odd-indexed step only (shifted one sample)
+cases/ties_every4_N64.txt,ties_every4,64,64,58e856312a3c23b88788f5a15a92409860a8fb6e841fcb3a16554abf32a9bab5,tie on every 4th step (parity-balanced period-4)
+cases/ties_every4_shift1_N64.txt,ties_every4_shift1,64,64,a2d1e5fbad9a9f27b63feab84819ff86179b71f15b2b836ce03bc0ae4c2a14d6,tie on every 4th step (parity-balanced period-4) (shifted one sample)
+cases/walk_tie02_N64.txt,walk_tie02,64,64,22f0fac63d35f7dc906664f74ff9c383e58bb4de735bd328afe568788a594af6,"random +/-1 walk, tie probability 0.02 (MIT-BIH spans ~0.02-0.13)"
+cases/walk_tie02_shift1_N64.txt,walk_tie02_shift1,64,64,cb1ecd6ae9c3318fa5c7af9da253383d1268633980ccefe6356e30545745dd39,"random +/-1 walk, tie probability 0.02 (MIT-BIH spans ~0.02-0.13) (shifted one sample)"
+cases/walk_tie05_N64.txt,walk_tie05,64,64,a2819d840fb22f9123a25868e5210e28c470607b23fb92a9043f286ff5c463c9,"random +/-1 walk, tie probability 0.05 (MIT-BIH spans ~0.02-0.13)"
+cases/walk_tie05_shift1_N64.txt,walk_tie05_shift1,64,64,21ad830b236534dd099d1736d2b8cc7c9b39d6e9e7ef4b4883ba1d1fa61bc0cd,"random +/-1 walk, tie probability 0.05 (MIT-BIH spans ~0.02-0.13) (shifted one sample)"
+cases/walk_tie13_N64.txt,walk_tie13,64,64,6046aabb9eae742929fe662e6c7db5cffafb3a2d81f7edcf3f1be29b460afdcf,"random +/-1 walk, tie probability 0.13 (MIT-BIH spans ~0.02-0.13)"
+cases/walk_tie13_shift1_N64.txt,walk_tie13_shift1,64,64,108f362221e6d408a2f4c061efd227f6ecf3ecb0280757ec52ef0746ced58704,"random +/-1 walk, tie probability 0.13 (MIT-BIH spans ~0.02-0.13) (shifted one sample)"
+cases/walk_tie30_N64.txt,walk_tie30,64,64,b851a48207b0bf0cabc7861542dfe81330cee65c3891ced4cec1eb23889e25d3,"random +/-1 walk, tie probability 0.3 (MIT-BIH spans ~0.02-0.13)"
+cases/walk_tie30_shift1_N64.txt,walk_tie30_shift1,64,64,0272896ed3462f38d7cd2e422e7a8e707ddc75dda7095e91e7d871f73cb31f7a,"random +/-1 walk, tie probability 0.3 (MIT-BIH spans ~0.02-0.13) (shifted one sample)"
+cases/walk_tie60_N64.txt,walk_tie60,64,64,961f5be382d9a5972b40e6cf7df2b9d99975ce329fea9d5bec912dbb89eba0ad,"random +/-1 walk, tie probability 0.6 (MIT-BIH spans ~0.02-0.13)"
+cases/walk_tie60_shift1_N64.txt,walk_tie60_shift1,64,64,9de5523972f7f91fa9b409abca967466a5a20daa3eb7ef5314981c3455d32c8b,"random +/-1 walk, tie probability 0.6 (MIT-BIH spans ~0.02-0.13) (shifted one sample)"
+cases/flat_N256.txt,flat,256,256,994178e8f257b4acf2d5f4dafea2f5a6d8a52d4f57c6bbad576487594c29de21,all samples equal: every comparison ties
+cases/flat_shift1_N256.txt,flat_shift1,256,256,994178e8f257b4acf2d5f4dafea2f5a6d8a52d4f57c6bbad576487594c29de21,all samples equal: every comparison ties (shifted one sample)
+cases/ramp_N256.txt,ramp,256,256,0e55b5f9a16cf7ff7743aeca77d64e2585b32868c4c6dcd4d07f47e548985418,strictly increasing: no ties
+cases/ramp_shift1_N256.txt,ramp_shift1,256,256,4afc8a595b9440696c29776f54c6f6ceba17e137d3218d80d77c091341340803,strictly increasing: no ties (shifted one sample)
+cases/alternate_N256.txt,alternate,256,256,e3f3902a22b8795100e69d9dee7c1032619ae48d7b57a126986ff39babb4105d,"0,1,0,1: every step reverses, no ties"
+cases/alternate_shift1_N256.txt,alternate_shift1,256,256,67fb4edb1e04f481ef7e76cd68da281bb16e9699ca4eeeafb7e7c5481b2aea7e,"0,1,0,1: every step reverses, no ties (shifted one sample)"
+cases/ramp_jitter_N256.txt,ramp_jitter,256,256,289b7fceb2d7c65e87daf852412ab2f9733aeb229ec88efe8824824ee6e4bfa0,ramp plus +/-1 jitter (Lucas false-alarm case)
+cases/ramp_jitter_shift1_N256.txt,ramp_jitter_shift1,256,256,85cdd7dcce03d3ef171bf5745805e6c60e6b9ffa8cd21dfe27e4b3156207dad2,ramp plus +/-1 jitter (Lucas false-alarm case) (shifted one sample)
+cases/ties_even_steps_N256.txt,ties_even_steps,256,256,34b23a1c28ad754a73f0e186dba2b7e704faf154fda2f6d7b4c3c7b123187976,ties on every even-indexed step only
+cases/ties_even_steps_shift1_N256.txt,ties_even_steps_shift1,256,256,2a42001b8f8b92a9d086481151592ef190e1aaa8734db9172b32273fa2069469,ties on every even-indexed step only (shifted one sample)
+cases/ties_odd_steps_N256.txt,ties_odd_steps,256,256,2a42001b8f8b92a9d086481151592ef190e1aaa8734db9172b32273fa2069469,ties on every odd-indexed step only
+cases/ties_odd_steps_shift1_N256.txt,ties_odd_steps_shift1,256,256,cf684c7434be8f8d3554fef48a5476ac2411304cbd23f2d6b9f9772c9f36aa23,ties on every odd-indexed step only (shifted one sample)
+cases/ties_every4_N256.txt,ties_every4,256,256,641050b7f9b9b9456f18c53cfff3bba874a4e47ffe671377d44f1c1f9974f3a5,tie on every 4th step (parity-balanced period-4)
+cases/ties_every4_shift1_N256.txt,ties_every4_shift1,256,256,2d643630c85556ffe8cff0341986435d170cefc212232e7bc1258d57231cd4a0,tie on every 4th step (parity-balanced period-4) (shifted one sample)
+cases/walk_tie02_N256.txt,walk_tie02,256,256,18a35bb64dbab88fcf1fb60283e3880325f3bbbf6581900c4dda93cb5b9ffbdf,"random +/-1 walk, tie probability 0.02 (MIT-BIH spans ~0.02-0.13)"
+cases/walk_tie02_shift1_N256.txt,walk_tie02_shift1,256,256,5cb4c3a14120a2f892b45ec3a5e48aecbc965a91e3ba681b66f9dd3a074e16d8,"random +/-1 walk, tie probability 0.02 (MIT-BIH spans ~0.02-0.13) (shifted one sample)"
+cases/walk_tie05_N256.txt,walk_tie05,256,256,b4911a23e0bdeba1c0b070b5a0825efb163f9250ac45ca3a4725688d932f85af,"random +/-1 walk, tie probability 0.05 (MIT-BIH spans ~0.02-0.13)"
+cases/walk_tie05_shift1_N256.txt,walk_tie05_shift1,256,256,49ed7e76017feb5653c78413c7ba7a47676b71203f31222ed1382419c886f77b,"random +/-1 walk, tie probability 0.05 (MIT-BIH spans ~0.02-0.13) (shifted one sample)"
+cases/walk_tie13_N256.txt,walk_tie13,256,256,e8ed1c7c509005a33e2610a71dbf398b6153c94f17b9b911dbcc96973820b315,"random +/-1 walk, tie probability 0.13 (MIT-BIH spans ~0.02-0.13)"
+cases/walk_tie13_shift1_N256.txt,walk_tie13_shift1,256,256,c1135f4e14a601de49c2e5146262fbccf4d52fa7f02c5f0a307b501254f7970c,"random +/-1 walk, tie probability 0.13 (MIT-BIH spans ~0.02-0.13) (shifted one sample)"
+cases/walk_tie30_N256.txt,walk_tie30,256,256,72f19d7474ead81a33d61abe5fd6fed97f06292a225f07b5e68e9216fcd4ba7d,"random +/-1 walk, tie probability 0.3 (MIT-BIH spans ~0.02-0.13)"
+cases/walk_tie30_shift1_N256.txt,walk_tie30_shift1,256,256,82085c4e451fcb37ee703bf651c8e628b98d4694669899bbddaf74340ec9cc94,"random +/-1 walk, tie probability 0.3 (MIT-BIH spans ~0.02-0.13) (shifted one sample)"
+cases/walk_tie60_N256.txt,walk_tie60,256,256,55c315d0b64d269a409d357a4994655075226a5be0517f198180faebf8a94d80,"random +/-1 walk, tie probability 0.6 (MIT-BIH spans ~0.02-0.13)"
+cases/walk_tie60_shift1_N256.txt,walk_tie60_shift1,256,256,b2776b81bd90ad6d082256b34c175dbea0788c2a721335cc967e0256e72f0a3c,"random +/-1 walk, tie probability 0.6 (MIT-BIH spans ~0.02-0.13) (shifted one sample)"
+cases/flat_N1024.txt,flat,1024,1024,90a2b0cab1931a513e2c2e062bff8611f4930a325b723c9e49df3d84b08bc441,all samples equal: every comparison ties
+cases/flat_shift1_N1024.txt,flat_shift1,1024,1024,90a2b0cab1931a513e2c2e062bff8611f4930a325b723c9e49df3d84b08bc441,all samples equal: every comparison ties (shifted one sample)
+cases/ramp_N1024.txt,ramp,1024,1024,93848844c368889f8a6e98a84cb568f77857e4498db7041480fa6ae5c91f7530,strictly increasing: no ties
+cases/ramp_shift1_N1024.txt,ramp_shift1,1024,1024,b0e13155df988e20eb5c2d1fdfc0db849cc42d90b147243ae9b74c4c2c6cb551,strictly increasing: no ties (shifted one sample)
+cases/alternate_N1024.txt,alternate,1024,1024,6c7296035af778e38f18ad234844a3bfcc024b7e84afd3ed38b4a32c7b47058a,"0,1,0,1: every step reverses, no ties"
+cases/alternate_shift1_N1024.txt,alternate_shift1,1024,1024,d3b493f29f7f8a9e23694768d2c2264b2e2f07ceadebdda74f040166158eb106,"0,1,0,1: every step reverses, no ties (shifted one sample)"
+cases/ramp_jitter_N1024.txt,ramp_jitter,1024,1024,61c29b56e2c15cbf4df0ebc73be3f8013af7b2840f0e8ae0b4bab7c075a58f04,ramp plus +/-1 jitter (Lucas false-alarm case)
+cases/ramp_jitter_shift1_N1024.txt,ramp_jitter_shift1,1024,1024,469f9def21cd9a8dfe8c9f2013c57167d976773c7e5b030301a5e03a3e8c904e,ramp plus +/-1 jitter (Lucas false-alarm case) (shifted one sample)
+cases/ties_even_steps_N1024.txt,ties_even_steps,1024,1024,5023df1880b558bd175b2fe09db1b07ff624fd0fa5b59771182bdf5e9a5d3af2,ties on every even-indexed step only
+cases/ties_even_steps_shift1_N1024.txt,ties_even_steps_shift1,1024,1024,6ea0046c631dc768bce2093d2661da14e287c2b1a919f481d23bf05523f23b64,ties on every even-indexed step only (shifted one sample)
+cases/ties_odd_steps_N1024.txt,ties_odd_steps,1024,1024,6ea0046c631dc768bce2093d2661da14e287c2b1a919f481d23bf05523f23b64,ties on every odd-indexed step only
+cases/ties_odd_steps_shift1_N1024.txt,ties_odd_steps_shift1,1024,1024,f033add0d73f7316e08442398c58630a79ffabe76ec1a0924d5a73cfc6390d85,ties on every odd-indexed step only (shifted one sample)
+cases/ties_every4_N1024.txt,ties_every4,1024,1024,b5652ab67c59e792a1009b44057a2e2789e9d7af838ba26ba5da370fabcb4124,tie on every 4th step (parity-balanced period-4)
+cases/ties_every4_shift1_N1024.txt,ties_every4_shift1,1024,1024,8b469cf7ee56724fe3c8b9012a4372d128205770ee4171786cec65fcbf1bf480,tie on every 4th step (parity-balanced period-4) (shifted one sample)
+cases/walk_tie02_N1024.txt,walk_tie02,1024,1024,d080d430a3eeb21c049755e15a7b95a870f3e066337a2b7d58c0ef6e5c8e027f,"random +/-1 walk, tie probability 0.02 (MIT-BIH spans ~0.02-0.13)"
+cases/walk_tie02_shift1_N1024.txt,walk_tie02_shift1,1024,1024,32e40ad466c9c79ccbb18d9321f4f00e1a2545fe09ad9556ac7e3a22591701d6,"random +/-1 walk, tie probability 0.02 (MIT-BIH spans ~0.02-0.13) (shifted one sample)"
+cases/walk_tie05_N1024.txt,walk_tie05,1024,1024,f9422782d9e6678ff9d1dde9bc2040f2ea7cac0891758d486a596c6c132c6597,"random +/-1 walk, tie probability 0.05 (MIT-BIH spans ~0.02-0.13)"
+cases/walk_tie05_shift1_N1024.txt,walk_tie05_shift1,1024,1024,78896eb83bf3a74a0d53502f320219567b57cdff3cc10013b50d88a0a6cead1f,"random +/-1 walk, tie probability 0.05 (MIT-BIH spans ~0.02-0.13) (shifted one sample)"
+cases/walk_tie13_N1024.txt,walk_tie13,1024,1024,32451fa05868a24a74025150b37de5f4fd7c53fc3280f0deccb8785e5d730f80,"random +/-1 walk, tie probability 0.13 (MIT-BIH spans ~0.02-0.13)"
+cases/walk_tie13_shift1_N1024.txt,walk_tie13_shift1,1024,1024,fbea52d9c0a1cb61ac45da583210c1c939ca0cdb2a8beaea3be78e961b86ea60,"random +/-1 walk, tie probability 0.13 (MIT-BIH spans ~0.02-0.13) (shifted one sample)"
+cases/walk_tie30_N1024.txt,walk_tie30,1024,1024,15c79981b4c6414352e99106207629e22d347961ab4c4c141ef1d010d58fcefa,"random +/-1 walk, tie probability 0.3 (MIT-BIH spans ~0.02-0.13)"
+cases/walk_tie30_shift1_N1024.txt,walk_tie30_shift1,1024,1024,50401e72bf2e334004d2ce4124a0c4c969669e62fd25d4cac46622e3934059ec,"random +/-1 walk, tie probability 0.3 (MIT-BIH spans ~0.02-0.13) (shifted one sample)"
+cases/walk_tie60_N1024.txt,walk_tie60,1024,1024,92dff1a12c144cacd3fc08e338af4d01c58c13e669e270276545549865d948de,"random +/-1 walk, tie probability 0.6 (MIT-BIH spans ~0.02-0.13)"
+cases/walk_tie60_shift1_N1024.txt,walk_tie60_shift1,1024,1024,0627eb90b165d330bb8fe4a90e5a91017b1ef3777cf59f5ffc5be08618095f50,"random +/-1 walk, tie probability 0.6 (MIT-BIH spans ~0.02-0.13) (shifted one sample)"
+cases/flat_N4096.txt,flat,4096,4096,1a7f301408a055e3d9951a3764a9bd4222f07dd4feb7f44a7914c7e1249762c1,all samples equal: every comparison ties
+cases/flat_shift1_N4096.txt,flat_shift1,4096,4096,1a7f301408a055e3d9951a3764a9bd4222f07dd4feb7f44a7914c7e1249762c1,all samples equal: every comparison ties (shifted one sample)
+cases/ramp_N4096.txt,ramp,4096,4096,2d5e8c07570e13a4a6edc026efa6e94c4f0901d09add762da2dfba8355d0a443,strictly increasing: no ties
+cases/ramp_shift1_N4096.txt,ramp_shift1,4096,4096,fa59a02f62d5fd474e4eab78de8cc9432446d45598b22d2854c4665b715f6508,strictly increasing: no ties (shifted one sample)
+cases/alternate_N4096.txt,alternate,4096,4096,8c079a7e7c8d90f347af58c5e9dee7c4b4616b6a2330e627cdd94d0da180df6f,"0,1,0,1: every step reverses, no ties"
+cases/alternate_shift1_N4096.txt,alternate_shift1,4096,4096,450ccd01288774dbba975d8cb9cadd84e2ac7ee1c9147a7da9f5ff3ed9cd4738,"0,1,0,1: every step reverses, no ties (shifted one sample)"
+cases/ramp_jitter_N4096.txt,ramp_jitter,4096,4096,58ded38237bf966bbbff0a28853a1be1cdf65a5b10d9d5bfb96d6e6214ce6ae1,ramp plus +/-1 jitter (Lucas false-alarm case)
+cases/ramp_jitter_shift1_N4096.txt,ramp_jitter_shift1,4096,4096,8d75dc77970b713ac91b5abd3bc0d1ffe3f279af8dbd6ce889156a6b27eb0e55,ramp plus +/-1 jitter (Lucas false-alarm case) (shifted one sample)
+cases/ties_even_steps_N4096.txt,ties_even_steps,4096,4096,83ed4d75a6d6d758b686b7a330e3922d70b21b966cfc6e66ccb2815fb736fa3b,ties on every even-indexed step only
+cases/ties_even_steps_shift1_N4096.txt,ties_even_steps_shift1,4096,4096,9a0a40f2101ea954140f0981b003d1e757adef783f9156bc918830ce885f2533,ties on every even-indexed step only (shifted one sample)
+cases/ties_odd_steps_N4096.txt,ties_odd_steps,4096,4096,9a0a40f2101ea954140f0981b003d1e757adef783f9156bc918830ce885f2533,ties on every odd-indexed step only
+cases/ties_odd_steps_shift1_N4096.txt,ties_odd_steps_shift1,4096,4096,e4ea005a2c8bfd36559728b2561c35d1f4e0750f08a7f5ebdfa22cb498e14ab5,ties on every odd-indexed step only (shifted one sample)
+cases/ties_every4_N4096.txt,ties_every4,4096,4096,d97308a1cbb5971a4a71eeb8dc6496facae5034d22221dc01eda2783aef7ccbc,tie on every 4th step (parity-balanced period-4)
+cases/ties_every4_shift1_N4096.txt,ties_every4_shift1,4096,4096,2f7789725f1e79dd2927ebefc17dd291532bc2c3cb706b33b03172287daa9f69,tie on every 4th step (parity-balanced period-4) (shifted one sample)
+cases/walk_tie02_N4096.txt,walk_tie02,4096,4096,0c161a26b379b9495f1a43cbcba335a551fd30532b9b459c26d44a3156adfa0a,"random +/-1 walk, tie probability 0.02 (MIT-BIH spans ~0.02-0.13)"
+cases/walk_tie02_shift1_N4096.txt,walk_tie02_shift1,4096,4096,2e4b99f99b353a2adb0483ce378fc8647f13abd67efddc21e723c724124d538a,"random +/-1 walk, tie probability 0.02 (MIT-BIH spans ~0.02-0.13) (shifted one sample)"
+cases/walk_tie05_N4096.txt,walk_tie05,4096,4096,ae6032a0a1bc0d621ea14f641429e84bb5aa1403dd8616340a5d1bca48664ad4,"random +/-1 walk, tie probability 0.05 (MIT-BIH spans ~0.02-0.13)"
+cases/walk_tie05_shift1_N4096.txt,walk_tie05_shift1,4096,4096,4da8b3abe744de153a9c303590462d9cb0d25d9e2824f62fe65061dbb541755e,"random +/-1 walk, tie probability 0.05 (MIT-BIH spans ~0.02-0.13) (shifted one sample)"
+cases/walk_tie13_N4096.txt,walk_tie13,4096,4096,5cd038838781460720fc7f325606ed30ddcb145a7e11edc7a6c9e0f271645041,"random +/-1 walk, tie probability 0.13 (MIT-BIH spans ~0.02-0.13)"
+cases/walk_tie13_shift1_N4096.txt,walk_tie13_shift1,4096,4096,769462a3f6c4370d5c39cf8f9bcbf4f195bd1e9ac589231da87c85149c5b45e0,"random +/-1 walk, tie probability 0.13 (MIT-BIH spans ~0.02-0.13) (shifted one sample)"
+cases/walk_tie30_N4096.txt,walk_tie30,4096,4096,13d55a101713e294eac73bdc6aff37cbc65f955af8a7ef8dc91ccc4b0c4b017c,"random +/-1 walk, tie probability 0.3 (MIT-BIH spans ~0.02-0.13)"
+cases/walk_tie30_shift1_N4096.txt,walk_tie30_shift1,4096,4096,3948fdfe8fb15b0adc521b3cf6030a4873e9c43f18849bb583f15d7e79bd72ca,"random +/-1 walk, tie probability 0.3 (MIT-BIH spans ~0.02-0.13) (shifted one sample)"
+cases/walk_tie60_N4096.txt,walk_tie60,4096,4096,7d119964bc4630ccacdf4bf714f83b17ee6a7de7f65653a983759a4a964eae5e,"random +/-1 walk, tie probability 0.6 (MIT-BIH spans ~0.02-0.13)"
+cases/walk_tie60_shift1_N4096.txt,walk_tie60_shift1,4096,4096,d8348e69c9e28e755326f16708e252a44c14462cef5a74b466147eee4d0c175e,"random +/-1 walk, tie probability 0.6 (MIT-BIH spans ~0.02-0.13) (shifted one sample)"
+cases/flat_N16384.txt,flat,16384,16384,f30ef9cb942ac6f25505cfb274a54533216e5d53d609e0ee5bd750d315b5c532,all samples equal: every comparison ties
+cases/flat_shift1_N16384.txt,flat_shift1,16384,16384,f30ef9cb942ac6f25505cfb274a54533216e5d53d609e0ee5bd750d315b5c532,all samples equal: every comparison ties (shifted one sample)
+cases/ramp_N16384.txt,ramp,16384,16384,2a2d50a8ab971bef682a50eba2296534b892cb0669a28581038f53897ea1f95b,strictly increasing: no ties
+cases/ramp_shift1_N16384.txt,ramp_shift1,16384,16384,3eba1feeb46164dcc45bf218ec576f6f4641695454403feaf7a4e3eb2fbcbd7f,strictly increasing: no ties (shifted one sample)
+cases/alternate_N16384.txt,alternate,16384,16384,264550083600be9dbcc2f46f3556a2ad3327df4383dbb748a50087ede74f8366,"0,1,0,1: every step reverses, no ties"
+cases/alternate_shift1_N16384.txt,alternate_shift1,16384,16384,d3ebe1c99aa480e4b8c56244942e3b8b836dd3502c256a7a683b0110d5d3b9f9,"0,1,0,1: every step reverses, no ties (shifted one sample)"
+cases/ramp_jitter_N16384.txt,ramp_jitter,16384,16384,ecea59c3a6382472907889839158338fd4192d380837d93266d0bf60740ca536,ramp plus +/-1 jitter (Lucas false-alarm case)
+cases/ramp_jitter_shift1_N16384.txt,ramp_jitter_shift1,16384,16384,f4997f7d1037771c7a23a6f106e4ce3bf29e448c982d584816f5ccdc4c80ace5,ramp plus +/-1 jitter (Lucas false-alarm case) (shifted one sample)
+cases/ties_even_steps_N16384.txt,ties_even_steps,16384,16384,911e8b6c50bf818c683797e29f58aa8978a40cfffb56f34bc79dd4763f9db267,ties on every even-indexed step only
+cases/ties_even_steps_shift1_N16384.txt,ties_even_steps_shift1,16384,16384,f20b2338c9bd1c25698ea778210a59e2c275fbfef28e1516fd749e0ab0a98e36,ties on every even-indexed step only (shifted one sample)
+cases/ties_odd_steps_N16384.txt,ties_odd_steps,16384,16384,f20b2338c9bd1c25698ea778210a59e2c275fbfef28e1516fd749e0ab0a98e36,ties on every odd-indexed step only
+cases/ties_odd_steps_shift1_N16384.txt,ties_odd_steps_shift1,16384,16384,28845b915ae518060239241050708e15fd621a23178a71eea46f7f0221526398,ties on every odd-indexed step only (shifted one sample)
+cases/ties_every4_N16384.txt,ties_every4,16384,16384,3c5bf67ef95566dc41db525ad97c4a2845d426e97edec36e97840921e3d9e6df,tie on every 4th step (parity-balanced period-4)
+cases/ties_every4_shift1_N16384.txt,ties_every4_shift1,16384,16384,d518264881814effd39a710ce08ac6f439ce3f7da0265ea5a33e888a3767d97b,tie on every 4th step (parity-balanced period-4) (shifted one sample)
+cases/walk_tie02_N16384.txt,walk_tie02,16384,16384,a075d38291c7e4e28bd74552281807a83d5b8b5157ec2986ae13a0ad6b848480,"random +/-1 walk, tie probability 0.02 (MIT-BIH spans ~0.02-0.13)"
+cases/walk_tie02_shift1_N16384.txt,walk_tie02_shift1,16384,16384,e3035186c86c51004bc3aa2ab9718a4921c4da756b6d08f71b90eeb4e59f73a5,"random +/-1 walk, tie probability 0.02 (MIT-BIH spans ~0.02-0.13) (shifted one sample)"
+cases/walk_tie05_N16384.txt,walk_tie05,16384,16384,075b7b0dd46d2db723ff392015f1187bcd51d70222a99da2a122cc82ec76a21e,"random +/-1 walk, tie probability 0.05 (MIT-BIH spans ~0.02-0.13)"
+cases/walk_tie05_shift1_N16384.txt,walk_tie05_shift1,16384,16384,6297b20f85149a0726ac743c653cca1bd5694461538b0076841e8f55efb41a78,"random +/-1 walk, tie probability 0.05 (MIT-BIH spans ~0.02-0.13) (shifted one sample)"
+cases/walk_tie13_N16384.txt,walk_tie13,16384,16384,5279a6a3509aa2d1c775d1503e7924d2b8e46a57cc0028809dc4a8e04c46d4d5,"random +/-1 walk, tie probability 0.13 (MIT-BIH spans ~0.02-0.13)"
+cases/walk_tie13_shift1_N16384.txt,walk_tie13_shift1,16384,16384,e8a9a3736ff54f71157bc2d089769efd1d6f8dc0d56c192f825145f1303afd03,"random +/-1 walk, tie probability 0.13 (MIT-BIH spans ~0.02-0.13) (shifted one sample)"
+cases/walk_tie30_N16384.txt,walk_tie30,16384,16384,ba73efbcfaf1b661538022c0bb10ac76e919105a2275a0413a897f8c4f44c098,"random +/-1 walk, tie probability 0.3 (MIT-BIH spans ~0.02-0.13)"
+cases/walk_tie30_shift1_N16384.txt,walk_tie30_shift1,16384,16384,d97dbc38a17e1c15815835419d222fa1c83ec2c6fc2f887bfc678fecb2ae02e0,"random +/-1 walk, tie probability 0.3 (MIT-BIH spans ~0.02-0.13) (shifted one sample)"
+cases/walk_tie60_N16384.txt,walk_tie60,16384,16384,21f39d90108209162d358a6fab692cdce7e27007f4e6ad2421d6b75dfbe57176,"random +/-1 walk, tie probability 0.6 (MIT-BIH spans ~0.02-0.13)"
+cases/walk_tie60_shift1_N16384.txt,walk_tie60_shift1,16384,16384,f388899eb28e5ca9119fd559363d3430c1c1f37cdaa68d65c0d3860fb7018237,"random +/-1 walk, tie probability 0.6 (MIT-BIH spans ~0.02-0.13) (shifted one sample)"
+cases/ties_exact510_N1024.txt,ties_exact510,1024,1024,c8dd4b542b0aa42251f98821e1f2522309e986dc8ade2b3d80d2cbf12a6ea07d,"exactly 510 tied steps, rest rising"
+cases/reversals_exact510_N1024.txt,reversals_exact510,1024,1024,0d66833d2bcec4de2beedcc4c768d7cb8b210a7b493e529a416468bef4b78e52,"exactly 510 sign reversals, no ties"
+cases/ties_exact511_N1024.txt,ties_exact511,1024,1024,21298a51474b79190fd2cc268af4be5e1428966757b1578e52d0b753c457a28a,"exactly 511 tied steps, rest rising"
+cases/reversals_exact511_N1024.txt,reversals_exact511,1024,1024,327edb8994da6ef27d2c90a31da4780d7ba90c36398ab2c1b37d3641d8b39d88,"exactly 511 sign reversals, no ties"
+cases/ties_exact512_N1024.txt,ties_exact512,1024,1024,394554b1f64dc5bcac5e681ff26479b4538603b883cb0b509e69628ad9dd4c61,"exactly 512 tied steps, rest rising"
+cases/reversals_exact512_N1024.txt,reversals_exact512,1024,1024,e0eee73c93cb92a4d7970395b54fc562ee72d594bbc8ed8eb5446665faeeb3e7,"exactly 512 sign reversals, no ties"
+cases/ties_exact513_N1024.txt,ties_exact513,1024,1024,3d01efd1289d0405cc36804701357a6561d3559f2756abded7d0e163d1985985,"exactly 513 tied steps, rest rising"
+cases/reversals_exact513_N1024.txt,reversals_exact513,1024,1024,180b471f362ea2816b6309304a46caa5ba21342df5ac1b8f56a6cc42d3835681,"exactly 513 sign reversals, no ties"
+cases/ties_exact514_N1024.txt,ties_exact514,1024,1024,69da5ed8037e929fefffdc94deec02e16fbe6dfdceb209fd5f96c4c068cce001,"exactly 514 tied steps, rest rising"
+cases/reversals_exact514_N1024.txt,reversals_exact514,1024,1024,7e46ef12c9e51ba63064d525fb7d0ced11fcb01cadf99620d5197429f5479f69,"exactly 514 sign reversals, no ties"
+cases/walk_tie13_len511_N511.txt,walk_tie13_len511,511,511,db8c3c1585c83ac5cb2434469f0355e91f5d0560af51b597d75838ac3e1c0aee,"tie-13% walk, odd length 511"
+cases/walk_tie13_len512_N512.txt,walk_tie13_len512,512,512,0f7e6d851b1ca0da7e92a488e590be3502f58636ffcabb095e9031e8072fc9f6,"tie-13% walk, odd length 512"
+cases/walk_tie13_len513_N513.txt,walk_tie13_len513,513,513,a3e10842d15469d57545f774a440d2f60ad5163fb96aae39d7c68859cf300138,"tie-13% walk, odd length 513"
+cases/walk_tie13_len514_N514.txt,walk_tie13_len514,514,514,947269830804f2ac4764ccea1a6ed0f98a0a8b87fa08dc74e169a5439b2635d5,"tie-13% walk, odd length 514"
+cases/walk_tie13_len1023_N1023.txt,walk_tie13_len1023,1023,1023,0212103dc02ddfa8e96b0ca010d54b31e19aef7e100bc2294fc5e9386a05aa3e,"tie-13% walk, odd length 1023"
+cases/walk_tie13_len1025_N1025.txt,walk_tie13_len1025,1025,1025,1bc2202c397f6cf18195397ca71832e8df7e94f8f59c57d05f44f79c880a786b,"tie-13% walk, odd length 1025"
+cases/walk_tie13_len2048_N2048.txt,walk_tie13_len2048,2048,2048,f108146bf276ad7d7fe2595f4ab7dc87b3610897db6e3e4e9abfc37104b6ca62,"tie-13% walk, odd length 2048"

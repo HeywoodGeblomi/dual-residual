@@ -1,0 +1,68 @@
+{
+ "id": "T1v04",
+ "definition": "Dwell parity on the core's own events (crossings of s>0 = rising vs not-rising), ALL events, value = complete dwell length, normalized (me-mo)/(me+mo)",
+ "code_sha256": "b7973ec99f0425182d2eaa5e522b4a853d1136c77b9fcfbc64ebff88251dec77",
+ "results": {
+  "1024": {
+   "windows": 13892,
+   "flip": 0.021595162683558884,
+   "tier_share": {
+    "None": 0.023322775698243592,
+    "T1": 0.0,
+    "T2": 0.427512237258854,
+    "T3": 0.5491649870429024
+   },
+   "top_tier": "T3",
+   "top_share": 0.5491649870429024,
+   "V": 2472,
+   "Nn": 10858,
+   "medS_V": 0.06770821660757065,
+   "medS_None": 0.09486165642738342,
+   "meanS_V": 0.0746632209257374,
+   "meanS_None": 0.10042045331054984,
+   "mw_p": 1.0,
+   "own_V": 0.9712783171521036,
+   "own_V_shuf": 0.8462783171521036,
+   "shuf_gap": 0.125,
+   "mcnemar_b": 367,
+   "mcnemar_c": 58,
+   "shuf_p": 2.7598439235312495e-56,
+   "own_None": 0.9787253637870694,
+   "bar1": false,
+   "bar2": true,
+   "bar3": true,
+   "bar4": true
+  },
+  "4096": {
+   "windows": 3459,
+   "flip": 0.22145128649898815,
+   "tier_share": {
+    "None": 0.03960682278115062,
+    "T1": 0.0,
+    "T2": 0.19976871928302978,
+    "T3": 0.7606244579358196
+   },
+   "top_tier": "T3",
+   "top_share": 0.7606244579358196,
+   "V": 1029,
+   "Nn": 2146,
+   "medS_V": 0.049900200217962265,
+   "medS_None": 0.06483300775289536,
+   "meanS_V": 0.05496360414033684,
+   "meanS_None": 0.06798864772728241,
+   "mw_p": 0.9999999999999999,
+   "own_V": 0.9494655004859086,
+   "own_V_shuf": 0.8707482993197279,
+   "shuf_gap": 0.07871720116618075,
+   "mcnemar_b": 128,
+   "mcnemar_c": 47,
+   "shuf_p": 3.670877994816966e-10,
+   "own_None": 0.9669151910531221,
+   "bar1": false,
+   "bar2": false,
+   "bar3": true,
+   "bar4": false
+  },
+  "PASS_ALL": false
+ }
+}

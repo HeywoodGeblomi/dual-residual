@@ -1,0 +1,3 @@
+T1v05 corr|sd| off0/off1 =0.849 sd(|sd|)=0.0523 sd(diff)=0.0288 flip transitions (0=None,2=T2,3=T3): {(0, 3): 226, (2, 3): 508}
+T1v06 corr|sd| off0/off1 =0.080 sd(|sd|)=0.1741 sd(diff)=0.2354 flip transitions (0=None,2=T2,3=T3): {(2, 3): 1008, (0, 2): 386, (0, 3): 111}
+T1v01 corr|sd| off0/off1 =0.827 sd(|sd|)=0.0515 sd(diff)=0.0304 flip transitions (0=None,2=T2,3=T3): {(0, 3): 208, (2, 3): 483, (0, 2): 1}
