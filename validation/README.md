@@ -22,6 +22,8 @@ DS2 is sealed on the honor system.
 DS2 has not been read.
 DS2 stays sealed and unscored.
 
+The latest independent gate review is gate log v3: `validation/gate_logs/dual_residual_gate_log_v3.md`.
+
 ## Job 1 contract
 
 Folder: `job1_contract/`.
@@ -108,8 +110,9 @@ It failed only the top-tier cap at N=1024.
 That share was 81.6% against an 80% cap.
 
 The bars were not changed after seeing results.
-The preregistered prediction was wrong.
-That prediction said at least one candidate would pass at both N.
+The frozen prediction was that at least one v2 candidate would pass the flip bar at both N.
+All four did, so the stride explanation for the N=4096 flips survives.
+That is a mechanism check, not a pass: no candidate passed every bar.
 
 An independent second harness, built separately, agreed with the blind run on all 32 pass or fail calls (4 bars, 4 candidates, 2 sizes).
 The second harness first ran the four preregistered candidates (V2-C1, V2-C2, V2-C3, V2-T6) before the prereg was frozen, against the same unchanged prereg file (sha256 starting f2d87c61).
@@ -149,8 +152,9 @@ The 2:1 becomes about 1.40 under the other sign choice.
 | `core_v2_prereg/` | Preregistered v2 candidates. Sampling and σ_Δ change together. The blind-run result files are not in this folder. |
 | `core_v2_results/` | The blind run and the independent cross-check. DS1 only. |
 | `edge_cases/` | Synthetic edge-case builder, a case index, and frozen reference outputs. The case waveform files are not included. |
+| `freeze_records/` | Freeze hashes for the v2 prereg, the bar-4 pin, and the early gate notes. |
 | `gate3_mechanism/` | Mechanism note, the probe program, and the probe output. |
-| `gate_logs/` | Gate checklist and the Gate 3 failure log. |
+| `gate_logs/` | Gate checklist and gate logs v1, v2, and v3. v3 is the latest independent gate review. |
 | `job1_contract/` | Target contract, split, stream profile, label builder, and dataset manifest. MIT-BIH waveform files are not included. |
 | `job3_perturbation/` | Gate 3 preregistration, perturbation run, results, and one logged fix attempt. |
 | `sigma_candidates/` | Three frozen σ_Δ candidates, the final bars, and the freeze hash list. No run results. |
